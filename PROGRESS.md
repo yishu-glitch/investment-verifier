@@ -17,3 +17,5 @@
 - Dependency install initially failed before any packages were installed: npm missing. Local npm bootstrap and retry started.
 - GitHub browser identity yishu-glitch verified; CLI authorization is still pending.
 - OPENAI_MODEL not selected yet; OpenAI directory authorization verified, generation not yet tested.
+
+- Backend milestone: 15 behavioral tests pass; local Cloudflare simulation connects to OpenAI/Fuyao/iFinD; first real research returned 不支持 because 2025 profit declined. 8 tool calls, main loop 90587 input/2489 output tokens before compaction optimization. Fixed partial-data retention and URL-only support validation after RED→GREEN tests. Prototype remains under user revision; no formal frontend implemented yet.

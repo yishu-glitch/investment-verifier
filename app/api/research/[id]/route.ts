@@ -1,0 +1,5 @@
+import {owner,repository,jsonResponse,checkOrigin} from '../../../../lib/server';
+import {validateInput} from '../../../../lib/validate';
+type Params={params:Promise<{id:string}>};
+export async function GET(request:Request,{params}:Params){const identity=owner(request);try{const {id}=await params;const state=await repository().get(id,identity.id,new URL(request.url).searchParams.get('version')||undefined);if(!state)return jsonResponse({error:'未找到此研究任务'},identity,404);return jsonResponse({state,versions:await repository().versions(id,identity.id)},identity);}catch(error){return jsonResponse({error:(error as Error).message},identity,500);}}
+export async function PATCH(request:Request,{params}:Params){const identity=owner(request);try{checkOrigin(request);const {id}=await params;const parsed=validateInput(await request.json());if(!parsed.ok)return jsonResponse({error:parsed.errors.join('；')},identity,400);const state=await repository().revise(id,parsed.input!,identity.id);return jsonResponse(state,identity);}catch(error){return jsonResponse({error:(error as Error).message},identity,409);}}

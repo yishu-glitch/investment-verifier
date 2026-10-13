@@ -60,3 +60,11 @@ export interface RunEvent {
   data?: unknown;
 }
 export function shortId(prefix='e'):string {return prefix+'_'+crypto.randomUUID().slice(0,12)}
+export interface ResearchState {
+  id:string;taskId:string;version:number;createdAt:string;updatedAt:string;
+  input:ResearchInput;status:'draft'|'running'|'completed'|'failed'|'stopped';
+  plan:ResearchQuestion[];events:RunEvent[];evidence:Evidence[];conclusion:Conclusion|null;
+  metrics:{label:string;current:number|null;previous:number|null;unit:string;growth:number|null;evidenceIds:string[]}[];
+  messages:{role:'user'|'assistant';text:string;at:string}[];
+  usage:{model:string;inputTokens:number;outputTokens:number;toolCalls:number};
+}
