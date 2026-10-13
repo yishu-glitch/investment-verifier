@@ -1,106 +1,64 @@
-const sidebarWidths = [74, 58, 82, 66, 71, 54];
-const articleWidths = [100, 97, 94, 98, 86];
-
-export default function Home() {
-  return (
-    <main className="fixed inset-0 overflow-hidden bg-[#fbfaf8] text-zinc-900">
-      <header
-        aria-hidden="true"
-        className="grid h-[76px] grid-cols-[1fr_auto_1fr] items-center border-b border-stone-200 bg-white/95 px-6 sm:px-14"
-      >
-        <div className="flex items-center gap-3">
-          <span className="h-9 w-9 rounded-full bg-stone-100" />
-          <span className="h-3.5 w-28 rounded-full bg-stone-100" />
-        </div>
-        <span className="hidden h-9 w-[min(30vw,420px)] rounded-xl bg-stone-100 sm:block" />
-        <div className="flex items-center justify-end gap-3">
-          <span className="hidden h-9 w-9 rounded-full bg-stone-100 sm:block" />
-          <span className="h-9 w-24 rounded-xl bg-stone-100" />
-        </div>
-      </header>
-
-      <div
-        aria-hidden="true"
-        className="grid h-[calc(100%-76px)] grid-cols-[180px_minmax(0,1fr)_260px] gap-10 px-6 pb-24 pt-10 opacity-55 max-lg:grid-cols-[150px_minmax(0,1fr)] max-sm:grid-cols-1 sm:px-14"
-      >
-        <aside className="hidden border-r border-stone-200 pr-7 sm:block">
-          <div className="mb-6 h-2.5 w-16 rounded-full bg-stone-200" />
-          <div className="space-y-4">
-            {sidebarWidths.map((width) => (
-              <div key={width} className="flex items-center gap-3">
-                <span className="h-4 w-4 rounded bg-stone-200" />
-                <span
-                  className="h-2.5 rounded-full bg-stone-200"
-                  style={{ width: `${width}%` }}
-                />
-              </div>
-            ))}
-          </div>
-          <div className="mb-6 mt-9 h-2.5 w-24 rounded-full bg-stone-200" />
-          <div className="space-y-4">
-            {sidebarWidths.slice(0, 3).map((width) => (
-              <span
-                key={width}
-                className="block h-2.5 rounded-full bg-stone-200"
-                style={{ width: `${width}%` }}
-              />
-            ))}
-          </div>
-        </aside>
-
-        <article className="mx-auto flex w-full max-w-3xl flex-col gap-6">
-          <div className="space-y-3">
-            <div className="h-2.5 w-28 rounded-full bg-stone-200" />
-            <div className="h-7 w-4/5 rounded-lg bg-stone-200" />
-            <div className="h-7 w-3/5 rounded-lg bg-stone-200" />
-          </div>
-          <div className="min-h-[240px] flex-1 rounded-2xl bg-stone-200" />
-          <div className="flex items-center gap-3">
-            <span className="h-9 w-9 rounded-full bg-stone-200" />
-            <span className="h-2.5 w-28 rounded-full bg-stone-200" />
-          </div>
-          <div className="space-y-2">
-            {articleWidths.map((width) => (
-              <span
-                key={width}
-                className="block h-2.5 rounded-full bg-stone-200"
-                style={{ width: `${width}%` }}
-              />
-            ))}
-          </div>
-        </article>
-
-        <aside className="space-y-5 max-lg:hidden">
-          {[0, 1].map((card) => (
-            <div
-              key={card}
-              className="space-y-4 rounded-2xl border border-stone-200 bg-white/70 p-6"
-            >
-              <span className="block h-10 w-10 rounded-full bg-stone-200" />
-              <span className="block h-3 w-3/5 rounded-full bg-stone-200" />
-              <span className="block h-2.5 w-full rounded-full bg-stone-200" />
-              <span className="block h-2.5 w-4/5 rounded-full bg-stone-200" />
-              <span className="block h-8 w-24 rounded-lg bg-stone-200" />
-            </div>
-          ))}
-        </aside>
-      </div>
-
-      <output
-        aria-live="polite"
-        aria-atomic="true"
-        className="absolute left-1/2 top-[clamp(96px,13vh,122px)] w-[min(620px,calc(100%-40px))] -translate-x-1/2 rounded-[18px] border border-stone-200 bg-white/95 px-5 py-5 shadow-[0_18px_50px_rgb(24_24_27/9%)] backdrop-blur-sm"
-      >
-        <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.09em] text-stone-500">
-          Building your site
-        </p>
-        <h1 className="text-xl font-semibold tracking-tight">
-          Your site is taking shape
-        </h1>
-        <p className="mt-1 text-sm text-stone-500">
-          Your first version will appear here automatically when it’s ready.
-        </p>
-      </output>
-    </main>
-  );
+'use client';
+import {useEffect,useRef,useState} from 'react';
+import {ChevronDown,ChevronRight,Plus,PanelRight,X,ArrowUp,RefreshCw,Check,LoaderCircle,FileText,Search,ShieldCheck,MessagesSquare,Download,ArrowUpRight,History,Info} from 'lucide-react';
+import type {ResearchState,ResearchInput,Evidence,RunEvent} from '../lib/domain';
+import {applyRunEvent} from '../lib/ui-state';
+import './visual.css';
+import './workspace.css';
+type Task={taskId:string;id:string;version:number;input:ResearchInput;status:string};
+type Version={id:string;version:number;input:ResearchInput;status:string;createdAt:string};
+const initial:ResearchInput={companyCode:'600519.SH',companyName:'贵州茅台',claim:'贵州茅台2025年度归母净利润增长主要来自主营业务改善',currentYear:2025,previousYear:2024,dataCutoff:'2026-10-13'};
+const sourceNames={financial:'财务字段',disclosure:'披露与复核',calculation:'计算结果',original:'官方原文定位'};
+const statuses:Record<string,string>={draft:'待验证',running:'验证中',completed:'验证完成',failed:'执行中断',stopped:'本轮已结束'};
+const names:Record<string,string>={support:'支持',oppose:'反对',unknown:'待核查',background:'背景与定位'};
+const shortcuts=[{icon:Info,title:'解释当前结论',prompt:'解释当前结论及关键依据，引用证据。'},{icon:ShieldCheck,title:'检查关键反证',prompt:'关键反证和证据缺口是什么？如何补查？请引用证据。'},{icon:Search,title:'核对指标口径',prompt:'核对利润、现金流、同比指标的期间、单位和报表口径，指出限制。'},{icon:FileText,title:'整理研究摘要',prompt:'整理简短研究摘要，包含命题、判断、证据、限制和改判条件，保留引用。'}];
+const date=(v:string)=>new Date(v).toLocaleString('zh-CN',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false});
+const number=(v:number|null,unit:string)=>v===null?'缺失':unit==='元'?(v/1e8).toLocaleString('zh-CN',{maximumFractionDigits:2}):v.toFixed(2)+(unit==='%'?'%':'');
+async function api(path:string,options:RequestInit={}):Promise<any>{const r=await fetch(path,{...options,headers:{'Content-Type':'application/json',...options.headers}});const d:any=await r.json();if(!r.ok)throw new Error(d.error||'请求失败');return d;}
+export default function Home(){
+ const [tasks,setTasks]=useState<Task[]>([]),[versions,setVersions]=useState<Version[]>([]),[s,setS]=useState<ResearchState|null>(null),[form,setForm]=useState(initial),[editing,setEditing]=useState(false),[panel,setPanel]=useState(true),[pane,setPane]=useState('chat'),[selected,setSelected]=useState<string|null>(null),[filter,setFilter]=useState('all'),[source,setSource]=useState('all'),[question,setQuestion]=useState(''),[busy,setBusy]=useState(false),[chatBusy,setChatBusy]=useState(false),[error,setError]=useState(''),[toast,setToast]=useState(''),[process,setProcess]=useState(false),[nav,setNav]=useState(false);
+ const controller=useRef<AbortController|null>(null),end=useRef<HTMLDivElement|null>(null);
+ const historical=!!s&&!!versions[0]&&s.version<versions[0].version;
+ const notify=(text:string)=>{setToast(text);setTimeout(()=>setToast(''),3500);};
+ async function refresh(){const d=await api('/api/research');setTasks(d.tasks);return d.tasks as Task[];}
+ async function load(id:string,v?:string){const d=await api(`/api/research/${id}${v?'?version='+v:''}`);setS(d.state);setVersions(d.versions);setForm(d.state.input);setEditing(false);setSelected(null);setNav(false);}
+ useEffect(()=>{let active=true;refresh().then(t=>{if(active&&t.length)load(t[0].taskId).catch(e=>setError(e.message));}).catch(e=>setError(e.message));return()=>{active=false;controller.current?.abort();};},[]);
+ useEffect(()=>{end.current?.scrollIntoView({block:'nearest'});},[s?.messages,chatBusy]);
+ const label=(id:string)=>{const i=s?.evidence.findIndex(e=>e.id===id)??-1;return i<0?id:'E'+String(i+1).padStart(2,'0');};
+ const open=(id:string)=>{setSelected(id);setPane('evidence');setPanel(true);};
+ const cites=(ids:string[])=>ids.map(id=><button className="cite" key={id} onClick={()=>open(id)} aria-label={`查看证据 ${label(id)}`}>{label(id)}</button>);
+ function textWithCites(text:string){const parts=text.split(/(e_[a-z0-9-]+)/g);return parts.map((part,i)=>s?.evidence.some(e=>e.id===part)?<button key={i} className="cite" onClick={()=>open(part)}>{label(part)}</button>:part);}
+ async function run(state:ResearchState){setBusy(true);setProcess(true);setEditing(false);setError('');setS(state);setVersions(previous=>[{id:state.id,version:state.version,input:state.input,status:state.status,createdAt:state.createdAt},...previous.filter(v=>v.id!==state.id)]);const abort=new AbortController();controller.current=abort;try{const r=await fetch(`/api/research/${state.taskId}/run`,{method:'POST',signal:abort.signal});if(!r.ok)throw new Error((await r.json() as any).error);const reader=r.body!.getReader(),decoder=new TextDecoder();let buffer='';for(;;){const {value,done}=await reader.read();if(done)break;buffer+=decoder.decode(value,{stream:true});let i;while((i=buffer.indexOf('\n\n'))>=0){const block=buffer.slice(0,i);buffer=buffer.slice(i+2);for(const line of block.split('\n'))if(line.startsWith('data: ')){const e=JSON.parse(line.slice(6)) as RunEvent;setS(current=>current?applyRunEvent(current,e):current);}}}await load(state.taskId);await refresh();}catch(e){if((e as Error).name==='AbortError'){try{await load(state.taskId);await refresh();}catch{}}else setError((e as Error).message);}finally{setBusy(false);controller.current=null;}}
+ async function submit(e:React.FormEvent){e.preventDefault();setError('');try{const next=!s?await api('/api/research',{method:'POST',body:JSON.stringify(form)}):JSON.stringify(form)!==JSON.stringify(s.input)||s.status!=='draft'?await api(`/api/research/${s.taskId}`,{method:'PATCH',body:JSON.stringify(form)}):s;await refresh();await run(next);}catch(e){setError((e as Error).message);}}
+ async function rerun(){if(!s)return;try{await run(s.status==='draft'?s:await api(`/api/research/${s.taskId}`,{method:'PATCH',body:JSON.stringify(s.input)}));}catch(e){setError((e as Error).message);}}
+ function stop(){controller.current?.abort();notify('已停止本轮验证；已取得的证据会保留');}
+ async function example(){setBusy(true);try{const state=await api('/api/example',{method:'POST'});await load(state.taskId);await refresh();notify('已载入真实联调存档；重新验证会再次调用数据服务');}catch(e){setError((e as Error).message);}finally{setBusy(false);}}
+ async function ask(e?:React.FormEvent,prompt?:string){e?.preventDefault();const text=(prompt||question).trim();if(!s||!text||busy||chatBusy)return;const versionAtSend=s.id;setChatBusy(true);setError('');setPane('chat');setPanel(true);setQuestion('');try{const d=await api(`/api/research/${s.taskId}/chat`,{method:'POST',body:JSON.stringify({question:text,versionId:s.id,evidenceId:selected||undefined})});setS(current=>current&&current.id===versionAtSend?{...current,messages:d.messages,usage:d.usage}:current);}catch(e){setError((e as Error).message);setQuestion(text);}finally{setChatBusy(false);}}
+ function download(){if(!s)return;const url=URL.createObjectURL(new Blob([JSON.stringify(s,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download=`证研_${s.input.companyName}_V${s.version}.json`;a.click();URL.revokeObjectURL(url);notify('完整研究与证据记录已导出');}
+ const evidence=s?.evidence||[],c=s?.conclusion,detail=evidence.find(e=>e.id===selected),used=new Set(c?.claims.flatMap(x=>x.evidenceIds)||[]);
+ const relation=(e:Evidence)=>used.has(e.id)?e.relation:'background';
+ const shown=evidence.filter(e=>(filter==='all'||relation(e)===filter)&&(source==='all'||e.sourceType===source));
+ const events=s?.events.filter(e=>['step','evidence','error','done'].includes(e.type))||[],last=events.at(-1);
+ const input=(key:keyof ResearchInput,value:string|number)=>setForm(f=>({...f,[key]:value}));
+ return <><a className="skip" href="#main">跳到研究内容</a><header className="topbar"><div className="brand"><span className="brandmark">证</span><strong>证研</strong><span className="brandcaption">投资命题验证工作台</span></div><div className="topright"><span className="demo">证据可追溯</span><span className="topnote">真实数据 · 多证据验证</span></div></header>
+ <div className={`app live-app ${panel?'':'panel-closed'}`}><aside className={`nav ${nav?'open':''}`} aria-label="研究任务与版本"><div className="navtop">研究空间<button className="icon mobile-close" onClick={()=>setNav(false)} aria-label="收起任务列表"><X size={16}/></button></div><button className="newtask" disabled={busy} onClick={()=>{setS(null);setVersions([]);setForm(initial);setSelected(null);setEditing(false);setNav(false);}}><Plus size={16}/> 新建研究</button><div className="navlabel">研究任务 <span>{tasks.length}</span></div>{tasks.map(t=><button key={t.taskId} disabled={busy} className={`task ${s?.taskId===t.taskId?'selected':''}`} onClick={()=>load(t.taskId).catch(e=>setError(e.message))}><span className="taskname">{t.input.companyName} · 盈利质量</span><span className="taskmeta">{t.input.currentYear} 年报 <i>V{t.version}</i></span></button>)}{s&&<><div className="navlabel versions-label">结论版本 <Info size={12}/></div><p className="versionhelp">每轮保留命题、证据与结论快照</p>{versions.map((v,i)=><button className={`version ${s.id===v.id?'current':''}`} disabled={busy} key={v.id} onClick={()=>load(s.taskId,v.id).catch(e=>setError(e.message))}><span className="versiondot"/><div><b>V{v.version} {i===0&&<em>最新</em>}</b><small>{v.input.claim}</small><small>{date(v.createdAt)} · {statuses[v.status]}</small></div></button>)}</>}<div className="navbottom"><ShieldCheck size={13}/> 研究自动保存<br/><small>历史版本保留完整证据</small></div></aside>
+ <div className="workspace"><div className="toolbar"><button className="icon mobile-menu" onClick={()=>setNav(true)} aria-label="打开研究任务"><History size={18}/></button><div className="target"><label>研究标的</label><b>{s?.input.companyName||'新研究'}</b><small>{s?.input.companyCode||'设置证券代码与年度'}</small></div><div className="period"><label>比较报告期</label><b>{s?`${s.input.currentYear} FY / ${s.input.previousYear} FY`:'年度合并报表'}</b></div><div className="cutoff">数据截止 <b>{s?.input.dataCutoff||form.dataCutoff}</b></div><div className="toolbar-actions"><span className="muted">{s?'自动保存':'真实数据验证'}</span><button disabled={!s} onClick={download}><Download size={14}/> 导出研究</button><button className="primary" disabled={!s||historical} onClick={busy?stop:rerun}>{busy?<><X size={14}/> 停止验证</>:<><RefreshCw size={14}/> 重新验证</>}</button><button className="icon" aria-label={panel?'收起辅助面板':'展开辅助面板'} aria-expanded={panel} onClick={()=>setPanel(!panel)}><PanelRight size={18}/></button></div></div>
+ <div className="content-layout"><main id="main" tabIndex={-1}>{error&&<div className="notice error-notice" role="alert"><b>操作未完成</b><p>{error}</p><button onClick={()=>setError('')}>关闭提示</button></div>}
+ {!s||editing?<div className="entry"><span className="eyebrow">从命题到证据</span><h1>{editing?'修订命题，保留上一轮判断':'把投资判断，变成可验证的命题。'}</h1><p className="subhead">明确公司与比较年度，Agent 拆解问题、调用真实数据，并检验支持与反对依据。</p><form className="claim research-form" onSubmit={submit}><div className="form-grid"><label>公司名称<input required value={form.companyName} onChange={e=>input('companyName',e.target.value)}/></label><label>证券代码<input required pattern="[0-9]{6}\.(SH|SZ|BJ)" value={form.companyCode} onChange={e=>input('companyCode',e.target.value.toUpperCase())}/></label><label>报告年度<input type="number" min="2017" max="2026" required value={form.currentYear} onChange={e=>input('currentYear',+e.target.value)}/></label><label>比较年度<input type="number" min="2016" max="2025" required value={form.previousYear} onChange={e=>input('previousYear',+e.target.value)}/></label><label>数据截止日期<input type="date" required value={form.dataCutoff} onChange={e=>input('dataCutoff',e.target.value)}/></label></div><label htmlFor="claimInput">投资命题</label><textarea id="claimInput" required minLength={5} maxLength={600} rows={4} value={form.claim} onChange={e=>input('claim',e.target.value)}/><div className="form-footer"><small>收入、利润来源、毛利率与现金流质量 · 年度比较</small><div>{editing&&<button type="button" onClick={()=>setEditing(false)}>取消</button>}<button className="primary" disabled={busy}>{busy?<LoaderCircle size={15} className="spin"/>:<ArrowUpRight size={15}/>} {editing?'创建新版本并验证':'开始验证'}</button></div></div></form>{!s&&<button className="examplebutton" disabled={busy} onClick={example}><FileText size={15}/> 载入贵州茅台真实研究案例 <ChevronRight size={14}/></button>}<p className="footnote">案例来自真实接口联调存档；重新验证会再次取数。首版聚焦 A 股年度盈利质量。</p></div>:<>
+ <div className="eyebrow">研究任务 {s.taskId.slice(0,8)} <span>/</span> V{s.version} {historical?'历史快照':'当前版本'}</div><div className="headrow"><div><h1>{s.input.companyName} · 盈利质量验证</h1><p className="subhead">{s.input.companyCode}　·　{s.input.currentYear} 年报对比 {s.input.previousYear} 年报</p></div><span className="status">{busy?<LoaderCircle size={13} className="spin"/>:<Check size={13}/>} {statuses[s.status]}</span></div>
+ {historical&&<div className="notice"><b>只读历史研究快照 · V{s.version}</b><p>命题、证据和结论均来自此轮验证。</p><button onClick={()=>load(s.taskId)}>返回最新版本</button></div>}
+ <section className="claim"><div className="sectionhead"><h2>投资命题</h2><button disabled={busy||historical} onClick={()=>{setForm(s.input);setEditing(true);}}>修订命题 <ArrowUpRight size={13}/></button></div><p className="claimtext">{s.input.claim}</p><div className="tags"><span>研究范围<b>盈利质量</b></span><span>比较口径<b>年度 · 合并报表</b></span><span>截止时点<b>{s.input.dataCutoff}</b></span></div></section>
+ <div className="decision-layout"><section className="conclusion"><div className="sectionhead"><span className="eyebrow">当前判断</span><small>结论 V{s.version}</small></div><h2 className="verdict">{c?.verdict||(busy?'验证进行中':'尚未形成结论')}</h2><p className="summary-text">{c?.summary||last?.label||'先形成计划，再核查命题前提与反证。'}</p>{c?.claims.map((x,i)=><p className="claim-result" key={i}><span className={`relation ${x.relation==='oppose'?'against':x.relation}`}>{names[x.relation]}</span> {x.text} {cites(x.evidenceIds)}</p>)}<div className="evidence-balance">{['support','oppose','unknown'].map(key=><span key={key}><b>{evidence.filter(e=>relation(e)===key).length}</b>{names[key]}记录</span>)}</div></section><section className="analysis-panel"><div className="analysis-kicker">财务变化速览</div><h3>检验命题前提</h3><p className="chartsub">实际年度同比 · 点击核查原始字段</p><div className="metric-overview">{s.metrics.filter(m=>m.unit==='元').map(m=><button key={m.label} disabled={!m.evidenceIds.length} onClick={()=>open(m.evidenceIds[0])}><span>{m.label}</span><strong className={m.growth!==null&&m.growth<0?'negative':''}>{m.growth===null?'暂无法计算':(m.growth>=0?'+':'')+m.growth.toFixed(2)+'%'}</strong><ChevronRight size={13}/></button>)}{!s.metrics.length&&<p className="analysis-note">取数与计算完成后显示；缺失值不填零。</p>}</div><p className="analysis-note">同比说明变化方向；主营业务归因仍需披露材料。</p></section></div>
+ <section className="execution"><button className="execution-toggle" aria-expanded={process} aria-controls="executionBody" onClick={()=>setProcess(!process)}><span><ChevronDown size={17} className={process?'rotated':''}/> 验证过程 <span className="process-badge">{busy?'实时执行':'执行记录'}</span></span><span className="progresslabel">{busy?last?.label||'正在启动':`${s.usage.toolCalls} 次工具调用`} <span>{process?'收起':'展开'}</span></span></button>{process&&<div id="executionBody" className="processsteps" aria-live="polite">{events.map((e,i)=><div className="step" key={e.stepId||i}><span className="stepicon">{busy&&i===events.length-1?<LoaderCircle size={14} className="spin"/>:e.status==='failed'?<X size={14}/>:<Check size={14}/>}</span><span>{e.label}</span><small>{date(e.at)}</small>{!!(e.data as any)?.tool&&<details className="technical"><summary>工具执行详情</summary><code>{(e.data as any).tool}</code></details>}</div>)}{!events.length&&<p>开始验证后展示真实执行过程。</p>}</div>}</section>
+ {!!s.plan.length&&<details className="plan-block"><summary><Search size={15}/> 验证计划 <span>{s.plan.length} 个子问题</span><ChevronDown size={15}/></summary><ol>{s.plan.map(q=><li key={q.id}><b>{q.question}</b><p>{q.method}</p><small>需要：{q.expectedSources.join('、')}</small></li>)}</ol></details>}
+ {!!c?.conflicts.length&&<section className="notice"><h2>证据冲突与处理</h2>{c.conflicts.map((x,i)=><div key={i}><p>{x.description} {cites(x.evidenceIds)}</p><p><b>处理：</b>{x.resolution}</p></div>)}</section>}
+ <section className="evidence-section"><div className="sectionhead"><h2>证据对照</h2><small>{evidence.length} 条记录 · {new Set(evidence.filter(e=>e.sourceType!=='original').map(e=>e.sourceId)).size} 组来源记录</small></div><div className="tabs" role="group" aria-label="证据关系筛选">{['all','support','oppose','unknown','background'].map(key=><button key={key} aria-pressed={filter===key} className={filter===key?'active':''} onClick={()=>setFilter(key)}>{key==='all'?'全部':names[key]}<span>{key==='all'?evidence.length:evidence.filter(e=>relation(e)===key).length}</span></button>)}</div><div className="filters"><label htmlFor="sourceFilter">来源类型</label><select id="sourceFilter" value={source} onChange={e=>setSource(e.target.value)}><option value="all">全部来源</option>{Object.entries(sourceNames).map(([key,name])=><option key={key} value={key}>{name}</option>)}</select><small>未用于判断的记录不自动视为反证或缺口</small></div>{shown.map(e=><article className="evidence-row" key={e.id}><span className="evidence-id">{label(e.id)}</span><div><h3>{e.title}</h3><p className="evidence-snippet">{e.content.slice(0,190)}{e.content.length>190?'…':''}</p><div className="evidence-meta">{sourceNames[e.sourceType]} · {e.reportPeriod} · {e.scope}</div></div><div><span className={`relation ${relation(e)==='oppose'?'against':relation(e)}`}>{names[relation(e)]}</span><button className="link" onClick={()=>open(e.id)}>查看详情 <ArrowUpRight size={12}/></button></div></article>)}{!shown.length&&<p className="empty-record">{evidence.length?'当前筛选没有记录':'取数完成后显示可核查证据'}</p>}</section>
+ <div className="research-bottom"><section className="metrics"><div className="sectionhead"><h2>关键指标对照</h2><small>金额：亿元</small></div><div className="tablewrap"><table><thead><tr><th>指标</th><th>{s.input.previousYear} FY</th><th>{s.input.currentYear} FY</th><th>同比 / 变化</th><th>依据</th></tr></thead><tbody>{s.metrics.map(m=><tr key={m.label}><td>{m.label}</td><td>{number(m.previous,m.unit)}</td><td>{number(m.current,m.unit)}</td><td className={m.growth!==null&&m.growth<0?'decline':'improve'}>{m.unit==='%'?(m.current!==null&&m.previous!==null?(m.current-m.previous).toFixed(2)+' pp':'无法计算'):m.growth!==null?m.growth.toFixed(2)+'%':'无法计算'}</td><td>{cites(m.evidenceIds)}</td></tr>)}</tbody></table></div><p className="tablenote">原始金额计算，展示换算亿元。基数为零或负数不计算同比；同一财报的多个字段不是独立事实。</p></section><section className="revision"><div className="sectionhead"><h2>什么信息会改变判断？</h2></div><ol>{c?.revisionTriggers.map((x,i)=><li key={i}><b>{x.condition}</b><p>{x.effect}</p></li>)}</ol>{!c&&<p>形成结论后显示改判条件。</p>}</section></div>
+ {c&&<section className="limitations"><h2>判断限制与未完成项</h2><ul>{c.limitations.map((x,i)=><li key={i}>{x}</li>)}</ul>{s.status==='stopped'&&<p>本轮已达到工具预算；需要补充证据时请创建新版本验证。</p>}</section>}<p className="footnote">结果须结合原始材料核查，不构成投资建议。官方链接仅用于定位；未逐页核验会明确标注。</p></>}
+ </main><aside className="panel" hidden={!panel} aria-label="研究辅助面板"><div className="paneltabs" role="tablist"><button role="tab" aria-selected={pane==='chat'} onClick={()=>setPane('chat')}><MessagesSquare size={14}/> 研究助手</button><button role="tab" aria-selected={pane==='evidence'} onClick={()=>setPane('evidence')}><FileText size={14}/> 证据详情</button><button className="icon" aria-label="收起辅助面板" onClick={()=>setPanel(false)}><X size={16}/></button></div><div className="contextline">上下文 <b>{s?`${s.input.companyName} · V${s.version}`:'尚未选择研究'}</b></div>
+ {pane==='chat'?<section className="assistantPane"><div className="messages"><div className="assistant-intro"><div className="assistant-symbol"><Search size={21}/></div><h3>围绕证据，继续研究</h3><p>结合本轮命题与证据回答。补取数据请修订命题并重新验证。</p></div><div className="skill-cards">{shortcuts.map(x=><button disabled={!s||busy||chatBusy} key={x.title} onClick={()=>ask(undefined,x.prompt)}><x.icon size={17}/><span>{x.title}</span><ChevronRight size={13}/></button>)}</div>{s?.messages.map((m,i)=><div className={`message ${m.role}`} key={i}><span className="message-label">{m.role==='user'?'你':'研究助手'}</span><p>{textWithCites(m.text)}</p>{m.role==='assistant'&&<button className="copy-answer" onClick={()=>navigator.clipboard.writeText(m.text).then(()=>notify('已复制回答')).catch(()=>notify('请手动选择文本复制'))}>复制回答</button>}</div>)}{chatBusy&&<div className="message assistant" role="status"><LoaderCircle size={14} className="spin"/> 正在结合证据回答…</div>}<div ref={end}/></div><div className="chatbottom">{selected&&<div className="selected-context"><FileText size={12}/> 引用 {label(selected)}<button aria-label="清除引用上下文" onClick={()=>setSelected(null)}><X size={12}/></button></div>}<form onSubmit={ask}><label htmlFor="questionInput">向研究助手追问</label><textarea id="questionInput" rows={3} maxLength={1500} value={question} onChange={e=>setQuestion(e.target.value)} placeholder={s?'询问结论、口径或反证…':'先创建或选择研究'} disabled={!s||busy}/><div className="composer-footer"><small>{busy?'验证完成后可追问':'基于当前版本与已有证据'}</small><button className="primary" aria-label="发送追问" disabled={!s||busy||chatBusy||!question.trim()}><ArrowUp size={16}/></button></div></form></div></section>:<section className="evidencePane">{detail?<div className="detail-content"><span className="evidence-id">{label(detail.id)}</span><span className="detail-label">{sourceNames[detail.sourceType]} · {names[relation(detail)]}</span><h2>{detail.title}</h2><dl><dt>来源与定位</dt><dd>{detail.locator}</dd><dt>报告期间 / 口径</dt><dd>{detail.reportPeriod} / {detail.scope}</dd><dt>披露时间 / 获取时间</dt><dd>{detail.disclosedAt||'接口未提供'} / {date(detail.fetchedAt)}</dd><dt>原始值 / 单位</dt><dd>{detail.rawValue} / {detail.unit}</dd></dl><span className="detail-label">原始字段或检索片段</span><blockquote>{detail.content}</blockquote>{detail.sourceUrl?<a className="source-link" target="_blank" rel="noreferrer" href={detail.sourceUrl}>{detail.sourceType==='financial'?'查看接口说明':'打开来源链接'} <ArrowUpRight size={13}/></a>:<p className="detail-warning">接口未返回原文链接或页码，不补造定位。</p>}<span className="detail-label">证据限制</span><ul>{detail.limitations.map((x,i)=><li key={i}>{x}</li>)}</ul><button onClick={()=>{setPane('chat');setQuestion(`请解释 ${detail.id} 的口径、限制及对命题的影响。`);}}>就此证据追问 <ChevronRight size={13}/></button><small className="raw-id">记录 ID：{detail.id}</small></div>:<div className="detail-content"><FileText size={24}/><h2>选择一条证据</h2><p>点击结论引用或证据记录，查看原始字段、来源及限制。</p></div>}</section>}
+ </aside></div></div></div>{toast&&<div className="toast show" role="status">{toast}</div>}</>;
 }
+
+
+

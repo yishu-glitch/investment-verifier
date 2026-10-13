@@ -1,0 +1,2438 @@
+{
+  "id": "884f1018-71f1-45fb-b779-082ec65f232a",
+  "taskId": "c1e79db0-1415-4ed0-84f5-2a91fac67942",
+  "version": 1,
+  "createdAt": "2026-10-13T23:10:46.088Z",
+  "updatedAt": "2026-10-13T23:11:49.105Z",
+  "input": {
+    "companyCode": "600519.SH",
+    "companyName": "贵州茅台",
+    "claim": "贵州茅台2025年度归母净利润增长主要来自主营业务改善",
+    "currentYear": 2025,
+    "previousYear": 2024,
+    "dataCutoff": "2026-10-13"
+  },
+  "status": "stopped",
+  "plan": [
+    {
+      "id": "Q1",
+      "question": "贵州茅台2025年归母净利润同比增长的绝对金额和增速分别是多少？这一增量在财务报表中是否已可被确认？",
+      "method": "对比2025年与2024年年报中的归母净利润、利润总额、扣非归母净利润等指标，计算同比增量和增速，并核对年报披露口径一致性。",
+      "expectedSources": [
+        "2025年年度报告",
+        "2024年年度报告",
+        "年度报告中的主要会计数据和财务指标"
+      ]
+    },
+    {
+      "id": "Q2",
+      "question": "2025年主营业务收入、其中酒类销售收入及其毛利率是否较2024年明显改善，并对利润增长形成主要贡献？",
+      "method": "比较2025年与2024年营业收入分项、主营业务收入、产品/业务分项收入和毛利率变化，判断利润增长是否主要来自主营业务经营改善。",
+      "expectedSources": [
+        "2025年年度报告",
+        "2024年年度报告",
+        "分产品/分业务收入及毛利率附注"
+      ]
+    },
+    {
+      "id": "Q3",
+      "question": "2025年归母净利润增长中，扣非归母净利润增长是否与归母净利润增长方向一致且幅度接近，从而支持增长主要来自经营性因素？",
+      "method": "比较归母净利润与扣非归母净利润的同比变化，分析两者差异是否较小；若差异较大，再进一步拆解非经常性损益影响。",
+      "expectedSources": [
+        "2025年年度报告",
+        "2024年年度报告",
+        "非经常性损益明细表"
+      ]
+    },
+    {
+      "id": "Q4",
+      "question": "2025年利润增长是否主要由主营业务之外的因素贡献，例如投资收益、公允价值变动、资产处置收益、政府补助或汇兑损益？",
+      "method": "拆解2025年与2024年利润表及附注中的投资收益、其他收益、公允价值变动收益、资产处置收益、营业外收支等项目，判断这些项目对净利润增量的贡献方向和大小。",
+      "expectedSources": [
+        "2025年年度报告",
+        "2024年年度报告",
+        "利润表及附注明细",
+        "非经常性损益明细表"
+      ]
+    },
+    {
+      "id": "Q5",
+      "question": "经营活动现金流是否同步改善，且与利润增长保持匹配，从现金流角度验证净利润增长的质量？",
+      "method": "比较2025年与2024年经营活动产生的现金流量净额、销售商品收到的现金、应收应付变化及现金含量，判断利润增长是否具备较高现金含量。",
+      "expectedSources": [
+        "2025年年度报告",
+        "2024年年度报告",
+        "现金流量表",
+        "经营活动现金流附注"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_fc1eb97c-cd2",
+      "type": "step",
+      "status": "running",
+      "label": "正在澄清命题并拆解验证问题",
+      "at": "2026-10-13T23:10:46.277Z"
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_3e83f66e-31c",
+      "type": "plan",
+      "status": "completed",
+      "label": "验证贵州茅台2025年度（合并报表口径）归母净利润同比增长是否主要由主营业务改善驱动，而不是由非经常性损益、投资收益、资产处置收益或其他一次性因素主导。",
+      "at": "2026-10-13T23:10:53.244Z",
+      "data": {
+        "supported": true,
+        "clarification": null,
+        "refinedClaim": "验证贵州茅台2025年度（合并报表口径）归母净利润同比增长是否主要由主营业务改善驱动，而不是由非经常性损益、投资收益、资产处置收益或其他一次性因素主导。",
+        "questions": [
+          {
+            "id": "Q1",
+            "question": "贵州茅台2025年归母净利润同比增长的绝对金额和增速分别是多少？这一增量在财务报表中是否已可被确认？",
+            "method": "对比2025年与2024年年报中的归母净利润、利润总额、扣非归母净利润等指标，计算同比增量和增速，并核对年报披露口径一致性。",
+            "expectedSources": [
+              "2025年年度报告",
+              "2024年年度报告",
+              "年度报告中的主要会计数据和财务指标"
+            ]
+          },
+          {
+            "id": "Q2",
+            "question": "2025年主营业务收入、其中酒类销售收入及其毛利率是否较2024年明显改善，并对利润增长形成主要贡献？",
+            "method": "比较2025年与2024年营业收入分项、主营业务收入、产品/业务分项收入和毛利率变化，判断利润增长是否主要来自主营业务经营改善。",
+            "expectedSources": [
+              "2025年年度报告",
+              "2024年年度报告",
+              "分产品/分业务收入及毛利率附注"
+            ]
+          },
+          {
+            "id": "Q3",
+            "question": "2025年归母净利润增长中，扣非归母净利润增长是否与归母净利润增长方向一致且幅度接近，从而支持增长主要来自经营性因素？",
+            "method": "比较归母净利润与扣非归母净利润的同比变化，分析两者差异是否较小；若差异较大，再进一步拆解非经常性损益影响。",
+            "expectedSources": [
+              "2025年年度报告",
+              "2024年年度报告",
+              "非经常性损益明细表"
+            ]
+          },
+          {
+            "id": "Q4",
+            "question": "2025年利润增长是否主要由主营业务之外的因素贡献，例如投资收益、公允价值变动、资产处置收益、政府补助或汇兑损益？",
+            "method": "拆解2025年与2024年利润表及附注中的投资收益、其他收益、公允价值变动收益、资产处置收益、营业外收支等项目，判断这些项目对净利润增量的贡献方向和大小。",
+            "expectedSources": [
+              "2025年年度报告",
+              "2024年年度报告",
+              "利润表及附注明细",
+              "非经常性损益明细表"
+            ]
+          },
+          {
+            "id": "Q5",
+            "question": "经营活动现金流是否同步改善，且与利润增长保持匹配，从现金流角度验证净利润增长的质量？",
+            "method": "比较2025年与2024年经营活动产生的现金流量净额、销售商品收到的现金、应收应付变化及现金含量，判断利润增长是否具备较高现金含量。",
+            "expectedSources": [
+              "2025年年度报告",
+              "2024年年度报告",
+              "现金流量表",
+              "经营活动现金流附注"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_af30e4e2-32c",
+      "type": "step",
+      "status": "running",
+      "label": "正在安排数据查询",
+      "at": "2026-10-13T23:10:53.26Z"
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_46230dbb-8b0",
+      "type": "step",
+      "status": "running",
+      "label": "正在确认公司与证券代码",
+      "at": "2026-10-13T23:10:54.533Z",
+      "data": {
+        "tool": "resolve_company"
+      }
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_50498403-5df",
+      "type": "step",
+      "status": "completed",
+      "label": "确认公司与证券代码完成",
+      "at": "2026-10-13T23:10:57.914Z",
+      "data": {
+        "tool": "resolve_company",
+        "ok": true,
+        "evidence": [],
+        "data": {
+          "answer": "|证券代码|证券简称|股票简称|\n|---|---|---|\n|600519.SH|贵州茅台|贵州茅台|",
+          "indicators_params": {}
+        }
+      }
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_d5904e71-1a5",
+      "type": "step",
+      "status": "running",
+      "label": "正在安排数据查询",
+      "at": "2026-10-13T23:10:57.926Z"
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_4c8e71f0-6ad",
+      "type": "step",
+      "status": "running",
+      "label": "正在查询年度财务与现金流",
+      "at": "2026-10-13T23:10:58.733Z",
+      "data": {
+        "tool": "get_financials"
+      }
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_bd7070a4-b72",
+      "type": "evidence",
+      "status": "completed",
+      "label": "查询年度财务与现金流完成",
+      "at": "2026-10-13T23:11:00.939Z",
+      "data": {
+        "tool": "get_financials",
+        "ok": true,
+        "evidence": [
+          {
+            "id": "e_669bb0ea-d62",
+            "sourceId": "report:600519.SH:2025:annual",
+            "questionId": "financial",
+            "sourceType": "financial",
+            "title": "2025 年度 · 营业收入",
+            "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+            "locator": "income-statements / 2025 / operating_income",
+            "reportPeriod": "2025 FY",
+            "disclosedAt": "2026-04-16",
+            "fetchedAt": "2026-10-13T23:11:00.623Z",
+            "rawValue": "168838102514.79",
+            "normalizedValue": 168838102514.79,
+            "unit": "元",
+            "scope": "年度累计 · 合并报表 · CNY",
+            "relation": "oppose",
+            "limitations": [],
+            "content": "营业收入：168838102514.79 元；原始字段 operating_income。"
+          },
+          {
+            "id": "e_cc02a110-20d",
+            "sourceId": "report:600519.SH:2025:annual",
+            "questionId": "financial",
+            "sourceType": "financial",
+            "title": "2025 年度 · 营业成本",
+            "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+            "locator": "income-statements / 2025 / operating_costs",
+            "reportPeriod": "2025 FY",
+            "disclosedAt": "2026-04-16",
+            "fetchedAt": "2026-10-13T23:11:00.623Z",
+            "rawValue": "14892277570.91",
+            "normalizedValue": 14892277570.91,
+            "unit": "元",
+            "scope": "年度累计 · 合并报表 · CNY",
+            "relation": "oppose",
+            "limitations": [],
+            "content": "营业成本：14892277570.91 元；原始字段 operating_costs。"
+          },
+          {
+            "id": "e_91a35ca8-49b",
+            "sourceId": "report:600519.SH:2025:annual",
+            "questionId": "financial",
+            "sourceType": "financial",
+            "title": "2025 年度 · 营业利润",
+            "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+            "locator": "income-statements / 2025 / operating_profit",
+            "reportPeriod": "2025 FY",
+            "disclosedAt": "2026-04-16",
+            "fetchedAt": "2026-10-13T23:11:00.623Z",
+            "rawValue": "114808950164.24",
+            "normalizedValue": 114808950164.24,
+            "unit": "元",
+            "scope": "年度累计 · 合并报表 · CNY",
+            "relation": "unknown",
+            "limitations": [],
+            "content": "营业利润：114808950164.24 元；原始字段 operating_profit。"
+          },
+          {
+            "id": "e_4f80b222-ce5",
+            "sourceId": "report:600519.SH:2025:annual",
+            "questionId": "financial",
+            "sourceType": "financial",
+            "title": "2025 年度 · 利润总额",
+            "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+            "locator": "income-statements / 2025 / profit_total",
+            "reportPeriod": "2025 FY",
+            "disclosedAt": "2026-04-16",
+            "fetchedAt": "2026-10-13T23:11:00.623Z",
+            "rawValue": "114755261605.08",
+            "normalizedValue": 114755261605.08,
+            "unit": "元",
+            "scope": "年度累计 · 合并报表 · CNY",
+            "relation": "unknown",
+            "limitations": [],
+            "content": "利润总额：114755261605.08 元；原始字段 profit_total。"
+          },
+          {
+            "id": "e_258f0041-946",
+            "sourceId": "report:600519.SH:2025:annual",
+            "questionId": "financial",
+            "sourceType": "financial",
+            "title": "2025 年度 · 净利润",
+            "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+            "locator": "income-statements / 2025 / net_profit",
+            "reportPeriod": "2025 FY",
+            "disclosedAt": "2026-04-16",
+            "fetchedAt": "2026-10-13T23:11:00.623Z",
+            "rawValue": "85310324833.67",
+            "normalizedValue": 85310324833.67,
+            "unit": "元",
+            "scope": "年度累计 · 合并报表 · CNY",
+            "relation": "unknown",
+            "limitations": [],
+            "content": "净利润：85310324833.67 元；原始字段 net_profit。"
+          },
+          {
+            "id": "e_32fae809-fa4",
+            "sourceId": "report:600519.SH:2025:annual",
+            "questionId": "financial",
+            "sourceType": "financial",
+            "title": "2025 年度 · 归母净利润",
+            "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+            "locator": "income-statements / 2025 / parent_holder_net_profit",
+            "reportPeriod": "2025 FY",
+            "disclosedAt": "2026-04-16",
+            "fetchedAt": "2026-10-13T23:11:00.623Z",
+            "rawValue": "82320067101.68",
+            "normalizedValue": 82320067101.68,
+            "unit": "元",
+            "scope": "年度累计 · 合并报表 · CNY",
+            "relation": "oppose",
+            "limitations": [],
+            "content": "归母净利润：82320067101.68 元；原始字段 parent_holder_net_profit。"
+          },
+          {
+            "id": "e_021d0033-e25",
+            "sourceId": "report:600519.SH:2025:annual",
+            "questionId": "financial",
+            "sourceType": "financial",
+            "title": "2025 年度 · 销售费用",
+            "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+            "locator": "income-statements / 2025 / sales_fee",
+            "reportPeriod": "2025 FY",
+            "disclosedAt": "2026-04-16",
+            "fetchedAt": "2026-10-13T23:11:00.623Z",
+            "rawValue": "7253499600.68",
+            "normalizedValue": 7253499600.68,
+            "unit": "元",
+            "scope": "年度累计 · 合并报表 · CNY",
+            "relation": "unknown",
+            "limitations": [],
+            "content": "销售费用：7253499600.68 元；原始字段 sales_fee。"
+          },
+          {
+            "id": "e_49a445ac-341",
+            "sourceId": "report:600519.SH:2025:annual",
+            "questionId": "financial",
+            "sourceType": "financial",
+            "title": "2025 年度 · 管理费用",
+            "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+            "locator": "income-statements / 2025 / manage_fee",
+            "reportPeriod": "2025 FY",
+            "disclosedAt": "2026-04-16",
+            "fetchedAt": "2026-10-13T23:11:00.623Z",
+            "rawValue": "8320061659.66",
+            "normalizedValue": 8320061659.66,
+            "unit": "元",
+            "scope": "年度累计 · 合并报表 · CNY",
+            "relation": "unknown",
+            "limitations": [],
+            "content": "管理费用：8320061659.66 元；原始字段 manage_fee。"
+          },
+          {
+            "id": "e_c758e7a9-f5d",
+            "sourceId": "report:600519.SH:2025:annual",
+            "questionId": "financial",
+            "sourceType": "financial",
+            "title": "2025 年度 · 研发费用",
+            "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+            "locator": "income-statements / 2025 / research_and_development_expenses",
+            "reportPeriod": "2025 FY",
+            "disclosedAt": "2026-04-16",
+            "fetchedAt": "2026-10-13T23:11:00.623Z",
+            "rawValue": "190112246.58",
+            "normalizedValue": 190112246.58,
+            "unit": "元",
+            "scope": "年度累计 · 合并报表 · CNY",
+            "relation": "unknown",
+            "limitations": [],
+            "content": "研发费用：190112246.58 元；原始字段 research_and_development_expenses。"
+          },
+          {
+            "id": "e_92d19661-f08",
+            "sourceId": "report:600519.SH:2024:annual",
+            "questionId": "financial",
+            "sourceType": "financial",
+            "title": "2024 年度 · 营业收入",
+            "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+            "locator": "income-statements / 2024 / operating_income",
+            "reportPeriod": "2024 FY",
+            "disclosedAt": "2026-04-16",
+            "fetchedAt": "2026-10-13T23:11:00.623Z",
+            "rawValue": "170899152276.34",
+            "normalizedValue": 170899152276.34,
+            "unit": "元",
+            "scope": "年度累计 · 合并报表 · CNY",
+            "relation": "oppose",
+            "limitations": [],
+            "content": "营业收入：170899152276.34 元；原始字段 operating_income。"
+          },
+          {
+            "id": "e_77f89f22-2f1",
+            "sourceId": "report:600519.SH:2024:annual",
+            "questionId": "financial",
+            "sourceType": "financial",
+            "title": "2024 年度 · 营业成本",
+            "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+            "locator": "income-statements / 2024 / operating_costs",
+            "reportPeriod": "2024 FY",
+            "disclosedAt": "2026-04-16",
+            "fetchedAt": "2026-10-13T23:11:00.623Z",
+            "rawValue": "13789482367.98",
+            "normalizedValue": 13789482367.98,
+            "unit": "元",
+            "scope": "年度累计 · 合并报表 · CNY",
+            "relation": "oppose",
+            "limitations": [],
+            "content": "营业成本：13789482367.98 元；原始字段 operating_costs。"
+          },
+          {
+            "id": "e_68ca1756-ce8",
+            "sourceId": "report:600519.SH:2024:annual",
+            "questionId": "financial",
+            "sourceType": "financial",
+            "title": "2024 年度 · 营业利润",
+            "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+            "locator": "income-statements / 2024 / operating_profit",
+            "reportPeriod": "2024 FY",
+            "disclosedAt": "2026-04-16",
+            "fetchedAt": "2026-10-13T23:11:00.623Z",
+            "rawValue": "119688579453.23",
+            "normalizedValue": 119688579453.23,
+            "unit": "元",
+            "scope": "年度累计 · 合并报表 · CNY",
+            "relation": "unknown",
+            "limitations": [],
+            "content": "营业利润：119688579453.23 元；原始字段 operating_profit。"
+          },
+          {
+            "id": "e_0539a97a-b3d",
+            "sourceId": "report:600519.SH:2024:annual",
+            "questionId": "financial",
+            "sourceType": "financial",
+            "title": "2024 年度 · 利润总额",
+            "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+            "locator": "income-statements / 2024 / profit_total",
+            "reportPeriod": "2024 FY",
+            "disclosedAt": "2026-04-16",
+            "fetchedAt": "2026-10-13T23:11:00.623Z",
+            "rawValue": "119638578194.46",
+            "normalizedValue": 119638578194.46,
+            "unit": "元",
+            "scope": "年度累计 · 合并报表 · CNY",
+            "relation": "unknown",
+            "limitations": [],
+            "content": "利润总额：119638578194.46 元；原始字段 profit_total。"
+          },
+          {
+            "id": "e_85cb3a0e-8fc",
+            "sourceId": "report:600519.SH:2024:annual",
+            "questionId": "financial",
+            "sourceType": "financial",
+            "title": "2024 年度 · 净利润",
+            "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+            "locator": "income-statements / 2024 / net_profit",
+            "reportPeriod": "2024 FY",
+            "disclosedAt": "2026-04-16",
+            "fetchedAt": "2026-10-13T23:11:00.623Z",
+            "rawValue": "89334728025.9",
+            "normalizedValue": 89334728025.9,
+            "unit": "元",
+            "scope": "年度累计 · 合并报表 · CNY",
+            "relation": "unknown",
+            "limitations": [],
+            "content": "净利润：89334728025.9 元；原始字段 net_profit。"
+          },
+          {
+            "id": "e_d90c0c7e-2d8",
+            "sourceId": "report:600519.SH:2024:annual",
+            "questionId": "financial",
+            "sourceType": "financial",
+            "title": "2024 年度 · 归母净利润",
+            "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+            "locator": "income-statements / 2024 / parent_holder_net_profit",
+            "reportPeriod": "2024 FY",
+            "disclosedAt": "2026-04-16",
+            "fetchedAt": "2026-10-13T23:11:00.623Z",
+            "rawValue": "86228146421.62",
+            "normalizedValue": 86228146421.62,
+            "unit": "元",
+            "scope": "年度累计 · 合并报表 · CNY",
+            "relation": "oppose",
+            "limitations": [],
+            "content": "归母净利润：86228146421.62 元；原始字段 parent_holder_net_profit。"
+          },
+          {
+            "id": "e_3b7e1a7c-59f",
+            "sourceId": "report:600519.SH:2024:annual",
+            "questionId": "financial",
+            "sourceType": "financial",
+            "title": "2024 年度 · 销售费用",
+            "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+            "locator": "income-statements / 2024 / sales_fee",
+            "reportPeriod": "2024 FY",
+            "disclosedAt": "2026-04-16",
+            "fetchedAt": "2026-10-13T23:11:00.623Z",
+            "rawValue": "5639300059.49",
+            "normalizedValue": 5639300059.49,
+            "unit": "元",
+            "scope": "年度累计 · 合并报表 · CNY",
+            "relation": "unknown",
+            "limitations": [],
+            "content": "销售费用：5639300059.49 元；原始字段 sales_fee。"
+          },
+          {
+            "id": "e_d0f82b22-e0e",
+            "sourceId": "report:600519.SH:2024:annual",
+            "questionId": "financial",
+            "sourceType": "financial",
+            "title": "2024 年度 · 管理费用",
+            "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+            "locator": "income-statements / 2024 / manage_fee",
+            "reportPeriod": "2024 FY",
+            "disclosedAt": "2026-04-16",
+            "fetchedAt": "2026-10-13T23:11:00.623Z",
+            "rawValue": "9315650060.38",
+            "normalizedValue": 9315650060.38,
+            "unit": "元",
+            "scope": "年度累计 · 合并报表 · CNY",
+            "relation": "unknown",
+            "limitations": [],
+            "content": "管理费用：9315650060.38 元；原始字段 manage_fee。"
+          },
+          {
+            "id": "e_a1265e70-bfb",
+            "sourceId": "report:600519.SH:2024:annual",
+            "questionId": "financial",
+            "sourceType": "financial",
+            "title": "2024 年度 · 研发费用",
+            "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+            "locator": "income-statements / 2024 / research_and_development_expenses",
+            "reportPeriod": "2024 FY",
+            "disclosedAt": "2026-04-16",
+            "fetchedAt": "2026-10-13T23:11:00.623Z",
+            "rawValue": "218375472.87",
+            "normalizedValue": 218375472.87,
+            "unit": "元",
+            "scope": "年度累计 · 合并报表 · CNY",
+            "relation": "unknown",
+            "limitations": [],
+            "content": "研发费用：218375472.87 元；原始字段 research_and_development_expenses。"
+          },
+          {
+            "id": "e_41a7680f-435",
+            "sourceId": "report:600519.SH:2025:annual",
+            "questionId": "financial",
+            "sourceType": "financial",
+            "title": "2025 年度 · 经营活动现金流净额",
+            "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+            "locator": "cash-flow-statements / 2025 / act_cash_flow_net",
+            "reportPeriod": "2025 FY",
+            "disclosedAt": "2026-04-16",
+            "fetchedAt": "2026-10-13T23:11:00.939Z",
+            "rawValue": "61522204989.35",
+            "normalizedValue": 61522204989.35,
+            "unit": "元",
+            "scope": "年度累计 · 合并报表 · CNY",
+            "relation": "oppose",
+            "limitations": [],
+            "content": "经营活动现金流净额：61522204989.35 元；原始字段 act_cash_flow_net。"
+          },
+          {
+            "id": "e_b0403a34-8ad",
+            "sourceId": "report:600519.SH:2024:annual",
+            "questionId": "financial",
+            "sourceType": "financial",
+            "title": "2024 年度 · 经营活动现金流净额",
+            "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+            "locator": "cash-flow-statements / 2024 / act_cash_flow_net",
+            "reportPeriod": "2024 FY",
+            "disclosedAt": "2026-04-16",
+            "fetchedAt": "2026-10-13T23:11:00.939Z",
+            "rawValue": "92463692168.43",
+            "normalizedValue": 92463692168.43,
+            "unit": "元",
+            "scope": "年度累计 · 合并报表 · CNY",
+            "relation": "oppose",
+            "limitations": [],
+            "content": "经营活动现金流净额：92463692168.43 元；原始字段 act_cash_flow_net。"
+          }
+        ],
+        "data": {
+          "income-statements": [
+            {
+              "thscode": "600519.SH",
+              "ticker": "600519",
+              "period": "annual",
+              "fiscal_year": 2025,
+              "fiscal_period": "FY",
+              "report_date_ms": 1776355200000,
+              "period_end_ms": 1767110400000,
+              "currency": "CNY",
+              "operating_income": 168838102514.79,
+              "operating_costs": 14892277570.91,
+              "operating_expenses": 57370818034.33,
+              "sales_fee": 7253499600.68,
+              "manage_fee": 8320061659.66,
+              "research_and_development_expenses": 190112246.58,
+              "operating_profit": 114808950164.24,
+              "interest_expenses": 175775959.12,
+              "profit_total": 114755261605.08,
+              "income_tax_expense": 29444936771.41,
+              "net_profit": 85310324833.67,
+              "parent_holder_net_profit": 82320067101.68,
+              "basic_eps": 65.66
+            },
+            {
+              "thscode": "600519.SH",
+              "ticker": "600519",
+              "period": "annual",
+              "fiscal_year": 2024,
+              "fiscal_period": "FY",
+              "report_date_ms": 1776355200000,
+              "period_end_ms": 1735574400000,
+              "currency": "CNY",
+              "operating_income": 170899152276.34,
+              "operating_costs": 13789482367.98,
+              "operating_expenses": 54523971452.57,
+              "sales_fee": 5639300059.49,
+              "manage_fee": 9315650060.38,
+              "research_and_development_expenses": 218375472.87,
+              "operating_profit": 119688579453.23,
+              "interest_expenses": 105127802.03,
+              "profit_total": 119638578194.46,
+              "income_tax_expense": 30303850168.56,
+              "net_profit": 89334728025.9,
+              "parent_holder_net_profit": 86228146421.62,
+              "basic_eps": 68.64
+            }
+          ],
+          "cash-flow-statements": [
+            {
+              "thscode": "600519.SH",
+              "ticker": "600519",
+              "period": "annual",
+              "fiscal_year": 2025,
+              "fiscal_period": "FY",
+              "report_date_ms": 1776355200000,
+              "period_end_ms": 1767110400000,
+              "currency": "CNY",
+              "act_cash_flow_net": 61522204989.35,
+              "invest_cash_flow_net": -31641898948.89,
+              "financing_cash_flow_net": -73427081208.87,
+              "pay_fixed_assets_etc_cash": 3127594916.41,
+              "pay_dividends_profits_interest_cash": 67241733345.45,
+              "cash_equivalents_net_addition": -43544479810.11
+            },
+            {
+              "thscode": "600519.SH",
+              "ticker": "600519",
+              "period": "annual",
+              "fiscal_year": 2024,
+              "fiscal_period": "FY",
+              "report_date_ms": 1776355200000,
+              "period_end_ms": 1735574400000,
+              "currency": "CNY",
+              "act_cash_flow_net": 92463692168.43,
+              "invest_cash_flow_net": -1785202630.71,
+              "financing_cash_flow_net": -71067506484.81,
+              "pay_fixed_assets_etc_cash": 4678712053.56,
+              "pay_dividends_profits_interest_cash": 70951027702.94,
+              "cash_equivalents_net_addition": 19609900305.36
+            }
+          ]
+        }
+      }
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_680388f1-348",
+      "type": "step",
+      "status": "running",
+      "label": "正在评估证据并决定下一步",
+      "at": "2026-10-13T23:11:00.973Z"
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_b2fdb594-4a6",
+      "type": "step",
+      "status": "running",
+      "label": "正在计算并核对财务指标",
+      "at": "2026-10-13T23:11:02.405Z",
+      "data": {
+        "tool": "calculate_metrics"
+      }
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_7cd9cd28-ffc",
+      "type": "step",
+      "status": "completed",
+      "label": "计算并核对财务指标完成",
+      "at": "2026-10-13T23:11:02.417Z",
+      "data": {
+        "tool": "calculate_metrics",
+        "ok": true,
+        "evidence": [],
+        "data": [
+          {
+            "label": "营业收入",
+            "current": 168838102514.79,
+            "previous": 170899152276.34,
+            "unit": "元",
+            "growth": -1.21,
+            "evidenceIds": [
+              "e_669bb0ea-d62",
+              "e_92d19661-f08"
+            ]
+          },
+          {
+            "label": "归母净利润",
+            "current": 82320067101.68,
+            "previous": 86228146421.62,
+            "unit": "元",
+            "growth": -4.53,
+            "evidenceIds": [
+              "e_32fae809-fa4",
+              "e_d90c0c7e-2d8"
+            ]
+          },
+          {
+            "label": "营业利润",
+            "current": 114808950164.24,
+            "previous": 119688579453.23,
+            "unit": "元",
+            "growth": -4.08,
+            "evidenceIds": [
+              "e_91a35ca8-49b",
+              "e_68ca1756-ce8"
+            ]
+          },
+          {
+            "label": "经营现金流净额",
+            "current": 61522204989.35,
+            "previous": 92463692168.43,
+            "unit": "元",
+            "growth": -33.46,
+            "evidenceIds": [
+              "e_41a7680f-435",
+              "e_b0403a34-8ad"
+            ]
+          },
+          {
+            "label": "毛利率",
+            "current": 91.17955168348007,
+            "previous": 91.93121663606456,
+            "unit": "%",
+            "growth": null,
+            "evidenceIds": [
+              "e_669bb0ea-d62",
+              "e_92d19661-f08",
+              "e_cc02a110-20d",
+              "e_77f89f22-2f1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_672ecf7b-292",
+      "type": "step",
+      "status": "running",
+      "label": "正在评估证据并决定下一步",
+      "at": "2026-10-13T23:11:02.426Z"
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_5bccd6c3-8d1",
+      "type": "step",
+      "status": "running",
+      "label": "正在检索原始披露片段",
+      "at": "2026-10-13T23:11:03.702Z",
+      "data": {
+        "tool": "search_disclosures"
+      }
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_d2664f63-8ba",
+      "type": "evidence",
+      "status": "completed",
+      "label": "检索原始披露片段完成",
+      "at": "2026-10-13T23:11:06.094Z",
+      "data": {
+        "tool": "search_disclosures",
+        "ok": true,
+        "evidence": [
+          {
+            "id": "e_92a9b931-0cd",
+            "sourceId": "notice:600519.SH:贵州茅台：贵州茅台2025年年度报告:2026-04-17",
+            "questionId": "disclosure",
+            "sourceType": "disclosure",
+            "title": "贵州茅台：贵州茅台2025年年度报告",
+            "sourceUrl": null,
+            "locator": "iFinD 语义检索片段，页码待原文确认",
+            "reportPeriod": "2025 / 2024",
+            "disclosedAt": "2026-04-17",
+            "fetchedAt": "2026-10-13T23:11:06.094Z",
+            "rawValue": "八、境内外会计准则下会计数据差异。(一)同时按照国际会计准则与按中国会计准则披露的财务报告中净利润和归属于上市公司股东的净资产差异情况。 (二)同时按照境外会计准则与按中国会计准则披露的财务报告中净利润和归属于上市公司股东的净资产差异情况。(三)境内外会计准则差异的说明：。九、2025年分季度主要财务数据。单位：元币种：人民币。 季度数据与已披露定期报告数据差异说明。十、非经常性损益项目和金额。单位：元币种：人民币。| 非经常性损益项目 | 2025年金额 | 附注（如适用） | 2024年金额 | 2023年金额 |。 | 计入当期损益的政府补助，但与公司正常经营业务密切相关、符合国家政策规定、按照确定的标准享有、对公司损益产生持续影响的政府补助除外 | 4,271,947.79 | | 4,539,419.20 | 17,137,523.89 | | 除同公司正常经营业务相关的有效套期保值业务外，非金融企业持有金融资产和金融负债产生的公允价值变动损益以及处置金融资产和金融负债产生的损益 | 76,162,597.66 | | 26,539,092.99 | 2, 439,902.5...",
+            "normalizedValue": null,
+            "unit": "原文",
+            "scope": "上市公司披露",
+            "relation": "support",
+            "limitations": [
+              "检索片段可能截断；需核对公告全文"
+            ],
+            "content": "八、境内外会计准则下会计数据差异。(一)同时按照国际会计准则与按中国会计准则披露的财务报告中净利润和归属于上市公司股东的净资产差异情况。 (二)同时按照境外会计准则与按中国会计准则披露的财务报告中净利润和归属于上市公司股东的净资产差异情况。(三)境内外会计准则差异的说明：。九、2025年分季度主要财务数据。单位：元币种：人民币。 季度数据与已披露定期报告数据差异说明。十、非经常性损益项目和金额。单位：元币种：人民币。| 非经常性损益项目 | 2025年金额 | 附注（如适用） | 2024年金额 | 2023年金额 |。 | 计入当期损益的政府补助，但与公司正常经营业务密切相关、符合国家政策规定、按照确定的标准享有、对公司损益产生持续影响的政府补助除外 | 4,271,947.79 | | 4,539,419.20 | 17,137,523.89 | | 除同公司正常经营业务相关的有效套期保值业务外，非金融企业持有金融资产和金融负债产生的公允价值变动损益以及处置金融资产和金融负债产生的损益 | 76,162,597.66 | | 26,539,092.99 | 2, 439,902.5..."
+          },
+          {
+            "id": "e_d57efeb8-ecb",
+            "sourceId": "notice:600519.SH:贵州茅台：贵州茅台2025年年度报告:2026-04-17",
+            "questionId": "disclosure",
+            "sourceType": "disclosure",
+            "title": "贵州茅台：贵州茅台2025年年度报告",
+            "sourceUrl": null,
+            "locator": "iFinD 语义检索片段，页码待原文确认",
+            "reportPeriod": "2025 / 2024",
+            "disclosedAt": "2026-04-17",
+            "fetchedAt": "2026-10-13T23:11:06.094Z",
+            "rawValue": "季度数据与已披露定期报告数据差异说明。十、非经常性损益项目和金额。单位：元币种：人民币。| 非经常性损益项目 | 2025年金额 | 附注（如适用） | 2024年金额 | 2023年金额 |。 | 除同公司正常经营业务相关的有效套期保值业务外，非金融企业持有金融资产和金融负债产生的公允价值变动损益以及处置金融资产和金融负债产生的损益 | 76,162,597.66 | | 26,539,092.99 | 2, 439,902.57 |。| 除上述各项之外的其他营业外收入和支出 | -48,197,347.69 | | -42,713,924.90 | -47,733,771.71 |。 以及将《公开发行证券的公司信息披露解释性公告第1号——非经常性损益》中列举的非经常性损益项目界定为经常性损益的项目，应说明原因。十一、存在股权激励、员工持股计划的公司可选择披露扣除股份支付影响后的净利润。 主导产品“贵州茅台酒”是我国大曲酱香型白酒的鼻祖和典型代表，集国家地理标志产品、有机食品和国家非物质文化遗产于一身，公司营销网络覆盖国内市场及五大洲66个国家和地区。 2025年度，公司经营模式为：...",
+            "normalizedValue": null,
+            "unit": "原文",
+            "scope": "上市公司披露",
+            "relation": "support",
+            "limitations": [
+              "检索片段可能截断；需核对公告全文"
+            ],
+            "content": "季度数据与已披露定期报告数据差异说明。十、非经常性损益项目和金额。单位：元币种：人民币。| 非经常性损益项目 | 2025年金额 | 附注（如适用） | 2024年金额 | 2023年金额 |。 | 除同公司正常经营业务相关的有效套期保值业务外，非金融企业持有金融资产和金融负债产生的公允价值变动损益以及处置金融资产和金融负债产生的损益 | 76,162,597.66 | | 26,539,092.99 | 2, 439,902.57 |。| 除上述各项之外的其他营业外收入和支出 | -48,197,347.69 | | -42,713,924.90 | -47,733,771.71 |。 以及将《公开发行证券的公司信息披露解释性公告第1号——非经常性损益》中列举的非经常性损益项目界定为经常性损益的项目，应说明原因。十一、存在股权激励、员工持股计划的公司可选择披露扣除股份支付影响后的净利润。 主导产品“贵州茅台酒”是我国大曲酱香型白酒的鼻祖和典型代表，集国家地理标志产品、有机食品和国家非物质文化遗产于一身，公司营销网络覆盖国内市场及五大洲66个国家和地区。 2025年度，公司经营模式为：..."
+          },
+          {
+            "id": "e_501dd62f-853",
+            "sourceId": "notice:600519.SH:贵州茅台：贵州茅台2025年年度报告:2026-04-17",
+            "questionId": "disclosure",
+            "sourceType": "disclosure",
+            "title": "贵州茅台：贵州茅台2025年年度报告",
+            "sourceUrl": null,
+            "locator": "iFinD 语义检索片段，页码待原文确认",
+            "reportPeriod": "2025 / 2024",
+            "disclosedAt": "2026-04-17",
+            "fetchedAt": "2026-10-13T23:11:06.094Z",
+            "rawValue": "十九、 补充资料。1、当期非经常性损益明细表。单位：元币种：人民币。| 项目 | 金额 | 说明 | 。| 非流动性资产处置损益，包括已计提资产减值准备的冲销部分 | -2,384,586.28 | | 。 | 除同公司正常经营业务相关的有效套期保值业务外，非金融企业持有金融资产和金融负债产生的公允价值变动损益以及处置金融资产和金融负债产生的损益 | 76,162,597.66 | | 。 对公司将《公开发行证券的公司信息披露解释性公告第1号——非经常性损益》未列举的项目认定为非经常性损益项目且金额重大的， | 合计 | 26,959,446.43 | |。对公司将《公开发行证券的公司信息披露解释性公告第1号——非经常性损益》未列举的项目认定为非经常性损益项目且金额重大的， 以及将《公开发行证券的公司信息披露解释性公告第1号——非经常性损益》中列举的非经常性损益项目界定为经常性损益的项目，应说明原因。2、净资产收益率及每股收益。 | 扣除非经常性损益后归属于公司普通股股东的净利润 | 32.52 | 65.64 | 65.64 |。3、境内外会计准则下会计数据差异。董事长：陈华。董事会...",
+            "normalizedValue": null,
+            "unit": "原文",
+            "scope": "上市公司披露",
+            "relation": "support",
+            "limitations": [
+              "检索片段可能截断；需核对公告全文"
+            ],
+            "content": "十九、 补充资料。1、当期非经常性损益明细表。单位：元币种：人民币。| 项目 | 金额 | 说明 | 。| 非流动性资产处置损益，包括已计提资产减值准备的冲销部分 | -2,384,586.28 | | 。 | 除同公司正常经营业务相关的有效套期保值业务外，非金融企业持有金融资产和金融负债产生的公允价值变动损益以及处置金融资产和金融负债产生的损益 | 76,162,597.66 | | 。 对公司将《公开发行证券的公司信息披露解释性公告第1号——非经常性损益》未列举的项目认定为非经常性损益项目且金额重大的， | 合计 | 26,959,446.43 | |。对公司将《公开发行证券的公司信息披露解释性公告第1号——非经常性损益》未列举的项目认定为非经常性损益项目且金额重大的， 以及将《公开发行证券的公司信息披露解释性公告第1号——非经常性损益》中列举的非经常性损益项目界定为经常性损益的项目，应说明原因。2、净资产收益率及每股收益。 | 扣除非经常性损益后归属于公司普通股股东的净利润 | 32.52 | 65.64 | 65.64 |。3、境内外会计准则下会计数据差异。董事长：陈华。董事会..."
+          },
+          {
+            "id": "e_8b19853a-d23",
+            "sourceId": "notice:600519.SH:贵州茅台：贵州茅台2025年年度报告摘要:2026-04-17",
+            "questionId": "disclosure",
+            "sourceType": "disclosure",
+            "title": "贵州茅台：贵州茅台2025年年度报告摘要",
+            "sourceUrl": null,
+            "locator": "iFinD 语义检索片段，页码待原文确认",
+            "reportPeriod": "2025 / 2024",
+            "disclosedAt": "2026-04-17",
+            "fetchedAt": "2026-10-13T23:11:06.094Z",
+            "rawValue": "公司坚持“生态优先、绿色发展”，坚持走好科技创新驱动发展的绿色发展道路，引领打造赤水河生态名片，用更先进方法和技术永葆环境竞争力。 建立生态环保制度地图，加大新技术新工艺引进研发，完善生态环境一体化监控网络，走出了国家级“绿色工厂”科技创新驱动的“双碳”路径。 持续开展流域微生物、水生物、植物植被的科学研究，全力守护流域生物多样性和稳定性，全力维护茅台酒赖以生存的生态系统平衡。3、公司主要会计数据和财务指标。3.1近3年的主要会计数据和财务指标。单位：元 币种：人民币。 | 归属于上市公司股东的扣除非经常性损益后的净利润 | 26,849,883,702.90 | 18,540,363,920.92 | 19,290,368,807.38 | 17,612,491,224.05 |。 季度数据与已披露定期报告数据差异说明。4、股东情况。4.1报告期末及年报披露前一个月末的普通股股东总数、表决权恢复的优先股股东总数和持有特别表决权股份的股东总数及前10名股东情况。单位:股。 | 前十名股东持股情况（不含通过转融通出借股份） | | | | | | | |。| 年度报告披露日前上一月末的普...",
+            "normalizedValue": null,
+            "unit": "原文",
+            "scope": "上市公司披露",
+            "relation": "unknown",
+            "limitations": [
+              "检索片段可能截断；需核对公告全文"
+            ],
+            "content": "公司坚持“生态优先、绿色发展”，坚持走好科技创新驱动发展的绿色发展道路，引领打造赤水河生态名片，用更先进方法和技术永葆环境竞争力。 建立生态环保制度地图，加大新技术新工艺引进研发，完善生态环境一体化监控网络，走出了国家级“绿色工厂”科技创新驱动的“双碳”路径。 持续开展流域微生物、水生物、植物植被的科学研究，全力守护流域生物多样性和稳定性，全力维护茅台酒赖以生存的生态系统平衡。3、公司主要会计数据和财务指标。3.1近3年的主要会计数据和财务指标。单位：元 币种：人民币。 | 归属于上市公司股东的扣除非经常性损益后的净利润 | 26,849,883,702.90 | 18,540,363,920.92 | 19,290,368,807.38 | 17,612,491,224.05 |。 季度数据与已披露定期报告数据差异说明。4、股东情况。4.1报告期末及年报披露前一个月末的普通股股东总数、表决权恢复的优先股股东总数和持有特别表决权股份的股东总数及前10名股东情况。单位:股。 | 前十名股东持股情况（不含通过转融通出借股份） | | | | | | | |。| 年度报告披露日前上一月末的普..."
+          }
+        ],
+        "data": {
+          "retrieved": 4,
+          "sourceCount": 2
+        }
+      }
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_715975c7-b64",
+      "type": "step",
+      "status": "running",
+      "label": "正在评估证据并决定下一步",
+      "at": "2026-10-13T23:11:06.124Z"
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_8a8eb11a-001",
+      "type": "step",
+      "status": "running",
+      "label": "正在定位官方报告原文",
+      "at": "2026-10-13T23:11:07.239Z",
+      "data": {
+        "tool": "locate_originals"
+      }
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_ca37076f-2a8",
+      "type": "evidence",
+      "status": "completed",
+      "label": "定位官方报告原文完成",
+      "at": "2026-10-13T23:11:26.09Z",
+      "data": {
+        "tool": "locate_originals",
+        "ok": true,
+        "evidence": [
+          {
+            "id": "e_7008a71a-892",
+            "sourceId": "https://static.cninfo.com.cn/finalpage/2026-04-17/1225114741.PDF?utm_source=openai",
+            "questionId": "original",
+            "sourceType": "original",
+            "title": "官方披露原文",
+            "sourceUrl": "https://static.cninfo.com.cn/finalpage/2026-04-17/1225114741.PDF?utm_source=openai",
+            "locator": "官方原文链接；打开核对对应章节",
+            "reportPeriod": "2025 / 2024",
+            "disclosedAt": null,
+            "fetchedAt": "2026-10-13T23:11:26.09Z",
+            "rawValue": "https://static.cninfo.com.cn/finalpage/2026-04-17/1225114741.PDF?utm_source=openai",
+            "normalizedValue": null,
+            "unit": "文档",
+            "scope": "原文定位",
+            "relation": "unknown",
+            "limitations": [
+              "该步骤仅定位原始材料，不代表系统已经逐页核验全文"
+            ],
+            "content": "已从官方域名检索到材料：https://static.cninfo.com.cn/finalpage/2026-04-17/1225114741.PDF?utm_source=openai。此证据只供溯源，不独立支持投资命题。"
+          },
+          {
+            "id": "e_53b4da68-1f2",
+            "sourceId": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF?utm_source=openai",
+            "questionId": "original",
+            "sourceType": "original",
+            "title": "官方披露原文",
+            "sourceUrl": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF?utm_source=openai",
+            "locator": "官方原文链接；打开核对对应章节",
+            "reportPeriod": "2025 / 2024",
+            "disclosedAt": null,
+            "fetchedAt": "2026-10-13T23:11:26.09Z",
+            "rawValue": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF?utm_source=openai",
+            "normalizedValue": null,
+            "unit": "文档",
+            "scope": "原文定位",
+            "relation": "unknown",
+            "limitations": [
+              "该步骤仅定位原始材料，不代表系统已经逐页核验全文"
+            ],
+            "content": "已从官方域名检索到材料：https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF?utm_source=openai。此证据只供溯源，不独立支持投资命题。"
+          },
+          {
+            "id": "e_c1fa4a12-f8a",
+            "sourceId": "https://static.cninfo.com.cn/finalpage/2026-04-17/1225114741.PDF",
+            "questionId": "original",
+            "sourceType": "original",
+            "title": "官方披露原文",
+            "sourceUrl": "https://static.cninfo.com.cn/finalpage/2026-04-17/1225114741.PDF",
+            "locator": "官方原文链接；打开核对对应章节",
+            "reportPeriod": "2025 / 2024",
+            "disclosedAt": null,
+            "fetchedAt": "2026-10-13T23:11:26.09Z",
+            "rawValue": "https://static.cninfo.com.cn/finalpage/2026-04-17/1225114741.PDF",
+            "normalizedValue": null,
+            "unit": "文档",
+            "scope": "原文定位",
+            "relation": "unknown",
+            "limitations": [
+              "该步骤仅定位原始材料，不代表系统已经逐页核验全文"
+            ],
+            "content": "已从官方域名检索到材料：https://static.cninfo.com.cn/finalpage/2026-04-17/1225114741.PDF。此证据只供溯源，不独立支持投资命题。"
+          },
+          {
+            "id": "e_872bd17a-707",
+            "sourceId": "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-17/600519_20260417_9QS4.pdf",
+            "questionId": "original",
+            "sourceType": "original",
+            "title": "官方披露原文",
+            "sourceUrl": "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-17/600519_20260417_9QS4.pdf",
+            "locator": "官方原文链接；打开核对对应章节",
+            "reportPeriod": "2025 / 2024",
+            "disclosedAt": null,
+            "fetchedAt": "2026-10-13T23:11:26.09Z",
+            "rawValue": "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-17/600519_20260417_9QS4.pdf",
+            "normalizedValue": null,
+            "unit": "文档",
+            "scope": "原文定位",
+            "relation": "unknown",
+            "limitations": [
+              "该步骤仅定位原始材料，不代表系统已经逐页核验全文"
+            ],
+            "content": "已从官方域名检索到材料：https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-17/600519_20260417_9QS4.pdf。此证据只供溯源，不独立支持投资命题。"
+          },
+          {
+            "id": "e_2ea46cf0-c3e",
+            "sourceId": "https://www.sse.com.cn/home/search/index.shtml?webswd=%E8%B4%B5%E5%B7%9E%E8%8C%85%E5%8F%B0+%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A",
+            "questionId": "original",
+            "sourceType": "original",
+            "title": "官方披露原文",
+            "sourceUrl": "https://www.sse.com.cn/home/search/index.shtml?webswd=%E8%B4%B5%E5%B7%9E%E8%8C%85%E5%8F%B0+%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A",
+            "locator": "官方原文链接；打开核对对应章节",
+            "reportPeriod": "2025 / 2024",
+            "disclosedAt": null,
+            "fetchedAt": "2026-10-13T23:11:26.09Z",
+            "rawValue": "https://www.sse.com.cn/home/search/index.shtml?webswd=%E8%B4%B5%E5%B7%9E%E8%8C%85%E5%8F%B0+%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A",
+            "normalizedValue": null,
+            "unit": "文档",
+            "scope": "原文定位",
+            "relation": "unknown",
+            "limitations": [
+              "该步骤仅定位原始材料，不代表系统已经逐页核验全文"
+            ],
+            "content": "已从官方域名检索到材料：https://www.sse.com.cn/home/search/index.shtml?webswd=%E8%B4%B5%E5%B7%9E%E8%8C%85%E5%8F%B0+%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A。此证据只供溯源，不独立支持投资命题。"
+          }
+        ],
+        "data": {
+          "located": [
+            {
+              "type": "url",
+              "url": "https://static.cninfo.com.cn/finalpage/2026-04-17/1225114741.PDF?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF?utm_source=openai"
+            },
+            {
+              "type": "url",
+              "url": "https://static.cninfo.com.cn/finalpage/2026-04-17/1225114741.PDF"
+            },
+            {
+              "type": "url",
+              "url": "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-17/600519_20260417_9QS4.pdf"
+            },
+            {
+              "type": "url",
+              "url": "https://www.sse.com.cn/home/search/index.shtml?webswd=%E8%B4%B5%E5%B7%9E%E8%8C%85%E5%8F%B0+%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A"
+            }
+          ],
+          "searchSummary": "以下为**贵州茅台（600519.SH）**的官方原文年度报告 PDF（仅列标题与链接）：\n\n- **贵州茅台酒股份有限公司2025年年度报告**  \n  链接：<https://static.cninfo.com.cn/finalpage/2026-04-17/1225114741.PDF> ([static.cninfo.com.cn](https://static.cninfo.com.cn/finalpage/2026-04-17/1225114741.PDF?utm_source=openai))\n\n- **贵州茅台酒股份有限公司2024年年度报告**  \n  链接：<https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF> ([static.cninfo.com.cn](https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF?utm_source=openai))\n\n如需，我也可以继续帮你补一版**上交所对应 PDF 链接**，仍只列标题和链接。",
+          "usage": {
+            "input_tokens": 25608,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 1400,
+            "output_tokens_details": {
+              "reasoning_tokens": 1213
+            },
+            "total_tokens": 27008
+          }
+        }
+      }
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_7822a0b0-57d",
+      "type": "step",
+      "status": "running",
+      "label": "正在评估证据并决定下一步",
+      "at": "2026-10-13T23:11:26.12Z"
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_0d5a414f-ed4",
+      "type": "step",
+      "status": "running",
+      "label": "正在交叉核对财务指标",
+      "at": "2026-10-13T23:11:27.186Z",
+      "data": {
+        "tool": "get_ifind_financials"
+      }
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_ea8b1837-2dc",
+      "type": "evidence",
+      "status": "completed",
+      "label": "交叉核对财务指标完成",
+      "at": "2026-10-13T23:11:31.093Z",
+      "data": {
+        "tool": "get_ifind_financials",
+        "ok": true,
+        "evidence": [
+          {
+            "id": "e_3fec8479-044",
+            "sourceId": "ifind:600519.SH:2025:2024",
+            "questionId": "crosscheck",
+            "sourceType": "disclosure",
+            "title": "iFinD 财务指标交叉复核",
+            "sourceUrl": null,
+            "locator": "get_stock_financials / 实际返回表格",
+            "reportPeriod": "2025 / 2024",
+            "disclosedAt": null,
+            "fetchedAt": "2026-10-13T23:11:31.093Z",
+            "rawValue": "{\"trade_time_description\":\"# 行情衍生指标日期提示\\n\\n当前时间是 07:11:33 ，由于本工具输出的行情类指标为日频指标，若请求时间早于当日收盘时间，则所有行情数据以及当日依赖行情数据计算的指标（如市值、估值、技术指标），实际使用的是昨日收盘后数据计算，每日日频数据更新时间一般在 15:05-15:15，请注意甄别\",\"answer\":\"|证券代码|证券简称|日期|归属母公司股东的净利润-扣除非经常损益(同比增长率)（单位：%）|\\n|---|---|---|---|\\n|600519.SH|贵州茅台|20251231|-4.5776|\\n|600519.SH|贵州茅台|20250930|6.42|\\n|600519.SH|贵州茅台|20250630|8.9276|\\n|600519.SH|贵州茅台|20250331|11.6351|\\n|600519.SH|贵州茅台|20241231|15.3685|\",\"indicators_params\":{\"归属母公司股东的净利润-扣除非经常损益(同比增长率)\":{\"报告期\":\"最新一期(MRQ)\"}}}",
+            "normalizedValue": null,
+            "unit": "原始表格",
+            "scope": "需核对返回日期、年度/单季和单位",
+            "relation": "oppose",
+            "limitations": [
+              "自然语言取数的实际返回口径需与请求和年报复核"
+            ],
+            "content": "{\"trade_time_description\":\"# 行情衍生指标日期提示\\n\\n当前时间是 07:11:33 ，由于本工具输出的行情类指标为日频指标，若请求时间早于当日收盘时间，则所有行情数据以及当日依赖行情数据计算的指标（如市值、估值、技术指标），实际使用的是昨日收盘后数据计算，每日日频数据更新时间一般在 15:05-15:15，请注意甄别\",\"answer\":\"|证券代码|证券简称|日期|归属母公司股东的净利润-扣除非经常损益(同比增长率)（单位：%）|\\n|---|---|---|---|\\n|600519.SH|贵州茅台|20251231|-4.5776|\\n|600519.SH|贵州茅台|20250930|6.42|\\n|600519.SH|贵州茅台|20250630|8.9276|\\n|600519.SH|贵州茅台|20250331|11.6351|\\n|600519.SH|贵州茅台|20241231|15.3685|\",\"indicators_params\":{\"归属母公司股东的净利润-扣除非经常损益(同比增长率)\":{\"报告期\":\"最新一期(MRQ)\"}}}"
+          }
+        ],
+        "data": {
+          "trade_time_description": "# 行情衍生指标日期提示\n\n当前时间是 07:11:33 ，由于本工具输出的行情类指标为日频指标，若请求时间早于当日收盘时间，则所有行情数据以及当日依赖行情数据计算的指标（如市值、估值、技术指标），实际使用的是昨日收盘后数据计算，每日日频数据更新时间一般在 15:05-15:15，请注意甄别",
+          "answer": "|证券代码|证券简称|日期|归属母公司股东的净利润-扣除非经常损益(同比增长率)（单位：%）|\n|---|---|---|---|\n|600519.SH|贵州茅台|20251231|-4.5776|\n|600519.SH|贵州茅台|20250930|6.42|\n|600519.SH|贵州茅台|20250630|8.9276|\n|600519.SH|贵州茅台|20250331|11.6351|\n|600519.SH|贵州茅台|20241231|15.3685|",
+          "indicators_params": {
+            "归属母公司股东的净利润-扣除非经常损益(同比增长率)": {
+              "报告期": "最新一期(MRQ)"
+            }
+          }
+        }
+      }
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_ed272ef2-dc7",
+      "type": "step",
+      "status": "running",
+      "label": "正在评估证据并决定下一步",
+      "at": "2026-10-13T23:11:31.129Z"
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_ba215d96-d94",
+      "type": "step",
+      "status": "running",
+      "label": "正在检索原始披露片段",
+      "at": "2026-10-13T23:11:33.508Z",
+      "data": {
+        "tool": "search_disclosures"
+      }
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_dfa39813-e95",
+      "type": "evidence",
+      "status": "completed",
+      "label": "检索原始披露片段完成",
+      "at": "2026-10-13T23:11:35.224Z",
+      "data": {
+        "tool": "search_disclosures",
+        "ok": true,
+        "evidence": [
+          {
+            "id": "e_5afe78a1-826",
+            "sourceId": "notice:600519.SH:贵州茅台：贵州茅台2025年年度报告:2026-04-17",
+            "questionId": "disclosure",
+            "sourceType": "disclosure",
+            "title": "贵州茅台：贵州茅台2025年年度报告",
+            "sourceUrl": null,
+            "locator": "iFinD 语义检索片段，页码待原文确认",
+            "reportPeriod": "2025 / 2024",
+            "disclosedAt": "2026-04-17",
+            "fetchedAt": "2026-10-13T23:11:35.224Z",
+            "rawValue": "| 归属于上市公司股东的净利润 | 82,320,067,101.68 | 86,228,146,421.62 | -4.53 | 74,734,071,550.75 |。 | 归属于上市公司股东的扣除非经常性损益的净利润 | 82,293,107,655.25 | 86,240,905,977.42 | -4.58 | 74,752,564,425.52 |。 | | 2025年末 | 2024年末 | 本期末比上年同期末增减（%） | 2023年末 |。 | 主要财务指标 | 2025年 | 2024年 | 本期比上年同期增减(%) | 2023年| | 主要财务指标 | 2025年 | 2024年 | 本期比上年同期增减(%) | 2023年 |。| 基本每股收益（元／股） | 65.66 | 68.64 | -4.34 | 59.49 |。 | 稀释每股收益（元／股） | 65.66 | 68.64 | -4.34 | 59.49 |。| 扣除非经常性损益后的基本每股收益（元／股） | 65.64 | 68.65 | -4.38 | 59.51 |。 | 扣除非经常性损益后的加...",
+            "normalizedValue": null,
+            "unit": "原文",
+            "scope": "上市公司披露",
+            "relation": "oppose",
+            "limitations": [
+              "检索片段可能截断；需核对公告全文"
+            ],
+            "content": "| 归属于上市公司股东的净利润 | 82,320,067,101.68 | 86,228,146,421.62 | -4.53 | 74,734,071,550.75 |。 | 归属于上市公司股东的扣除非经常性损益的净利润 | 82,293,107,655.25 | 86,240,905,977.42 | -4.58 | 74,752,564,425.52 |。 | | 2025年末 | 2024年末 | 本期末比上年同期末增减（%） | 2023年末 |。 | 主要财务指标 | 2025年 | 2024年 | 本期比上年同期增减(%) | 2023年| | 主要财务指标 | 2025年 | 2024年 | 本期比上年同期增减(%) | 2023年 |。| 基本每股收益（元／股） | 65.66 | 68.64 | -4.34 | 59.49 |。 | 稀释每股收益（元／股） | 65.66 | 68.64 | -4.34 | 59.49 |。| 扣除非经常性损益后的基本每股收益（元／股） | 65.64 | 68.65 | -4.38 | 59.51 |。 | 扣除非经常性损益后的加..."
+          },
+          {
+            "id": "e_8c718b17-967",
+            "sourceId": "notice:600519.SH:贵州茅台：贵州茅台2025年年度报告摘要:2026-04-17",
+            "questionId": "disclosure",
+            "sourceType": "disclosure",
+            "title": "贵州茅台：贵州茅台2025年年度报告摘要",
+            "sourceUrl": null,
+            "locator": "iFinD 语义检索片段，页码待原文确认",
+            "reportPeriod": "2025 / 2024",
+            "disclosedAt": "2026-04-17",
+            "fetchedAt": "2026-10-13T23:11:35.224Z",
+            "rawValue": "| | 2025年 | 2024年 | 本年比上年增减(%) | 2023年 |。 | | 2025年 | 2024年 | 本年比上年增减(%) | 2023年 |。 | 归属于上市公司股东的净利润 | 82,320,067,101.68 | 86,228,146,421.62 | -4.53 | 74,734,071,550.75 |。 | 归属于上市公司股东的扣除非经常性损益的净利润 | 82,293,107,655.25 | 86,240,905,977.42 | -4.58 | 74,752,564,425.52 |。 | 归属于上市公司股东的净利润 | 26,847,474,238.76 | 18,555,488,059.34 | 19,223,784,414.08 | 17,693,320,389.50 | | | 第一季度（1-3月份） | 第二季度（4-6月份） | 第三季度（7-9月份） | 第四季度（10-12月份） |。 | 归属于上市公司股东的扣除非经常性损益后的净利润 | 26,849,883,702.90 | 18,540,363,920.92 | 19,2...",
+            "normalizedValue": null,
+            "unit": "原文",
+            "scope": "上市公司披露",
+            "relation": "unknown",
+            "limitations": [
+              "检索片段可能截断；需核对公告全文"
+            ],
+            "content": "| | 2025年 | 2024年 | 本年比上年增减(%) | 2023年 |。 | | 2025年 | 2024年 | 本年比上年增减(%) | 2023年 |。 | 归属于上市公司股东的净利润 | 82,320,067,101.68 | 86,228,146,421.62 | -4.53 | 74,734,071,550.75 |。 | 归属于上市公司股东的扣除非经常性损益的净利润 | 82,293,107,655.25 | 86,240,905,977.42 | -4.58 | 74,752,564,425.52 |。 | 归属于上市公司股东的净利润 | 26,847,474,238.76 | 18,555,488,059.34 | 19,223,784,414.08 | 17,693,320,389.50 | | | 第一季度（1-3月份） | 第二季度（4-6月份） | 第三季度（7-9月份） | 第四季度（10-12月份） |。 | 归属于上市公司股东的扣除非经常性损益后的净利润 | 26,849,883,702.90 | 18,540,363,920.92 | 19,2..."
+          },
+          {
+            "id": "e_3553b437-74e",
+            "sourceId": "notice:600519.SH:贵州茅台：贵州茅台2025年年度报告:2026-04-17",
+            "questionId": "disclosure",
+            "sourceType": "disclosure",
+            "title": "贵州茅台：贵州茅台2025年年度报告",
+            "sourceUrl": null,
+            "locator": "iFinD 语义检索片段，页码待原文确认",
+            "reportPeriod": "2025 / 2024",
+            "disclosedAt": "2026-04-17",
+            "fetchedAt": "2026-10-13T23:11:35.224Z",
+            "rawValue": "| 项目 | 附注 | 2025年度 | 2024年度 |。| 一、营业总收入 | | 172,054,171,890.91 | 174,144,069,958.25 |。 | 项目 | 附注 | 2025年度 | 2024年度 |。| 一、营业总收入 | | 172,054,171,890.91 | 174,144,069,958.25 |。 | 其中：营业收入 | 44 | 168,838,102,514.79 | 170,899,152,276.34 |。| 2.终止经营净利润（净亏损以“－”号填列） | | | |。 | （一）归属母公司所有者的其他综合收益的税后净额 | | 4,137,381.07 | -3,854,497.18 |。| 1．不能重分类进损益的其他综合收益 | | | | | 项目 | 附注 | 2025年度 | 2024年度 |。| 一、营业总收入 | | 172,054,171,890.91 | 174,144,069,958.25 |。 | （一）归属于母公司所有者的综合收益总额 | | 82,324,204,482.75 | 86,224,291,9...",
+            "normalizedValue": null,
+            "unit": "原文",
+            "scope": "上市公司披露",
+            "relation": "unknown",
+            "limitations": [
+              "检索片段可能截断；需核对公告全文"
+            ],
+            "content": "| 项目 | 附注 | 2025年度 | 2024年度 |。| 一、营业总收入 | | 172,054,171,890.91 | 174,144,069,958.25 |。 | 项目 | 附注 | 2025年度 | 2024年度 |。| 一、营业总收入 | | 172,054,171,890.91 | 174,144,069,958.25 |。 | 其中：营业收入 | 44 | 168,838,102,514.79 | 170,899,152,276.34 |。| 2.终止经营净利润（净亏损以“－”号填列） | | | |。 | （一）归属母公司所有者的其他综合收益的税后净额 | | 4,137,381.07 | -3,854,497.18 |。| 1．不能重分类进损益的其他综合收益 | | | | | 项目 | 附注 | 2025年度 | 2024年度 |。| 一、营业总收入 | | 172,054,171,890.91 | 174,144,069,958.25 |。 | （一）归属于母公司所有者的综合收益总额 | | 82,324,204,482.75 | 86,224,291,9..."
+          },
+          {
+            "id": "e_be835a34-2d4",
+            "sourceId": "notice:600519.SH:贵州茅台：贵州茅台2025年年度报告:2026-04-17",
+            "questionId": "disclosure",
+            "sourceType": "disclosure",
+            "title": "贵州茅台：贵州茅台2025年年度报告",
+            "sourceUrl": null,
+            "locator": "iFinD 语义检索片段，页码待原文确认",
+            "reportPeriod": "2025 / 2024",
+            "disclosedAt": "2026-04-17",
+            "fetchedAt": "2026-10-13T23:11:35.224Z",
+            "rawValue": "| 扣除非经常性损益后的加权平均净资产收益率（%） | 32.52 | 36.03 | 减少3.51个百分点 | 34.20 |。报告期末公司前三年主要会计数据和财务指标的说明。 | 归属于上市公司股东的净利润 | 26,847,474,238.76 | 18,555,488,059.34 | 19,223,784,414.08 | 17,693,320,389.50 |。 | 归属于上市公司股东的扣除非经常性损益后的净利润 | 26,849,883,702.90 | 18,540,363,920.92 | 19,290,368,807.38 | 17,612,491,224.05 | | | 第一季度（1-3月份） | 第二季度（4-6月份） | 第三季度（7-9月份） | 第四季度（10-12月份） |。 季度数据与已披露定期报告数据差异说明。十、非经常性损益项目和金额。单位：元币种：人民币。| 非经常性损益项目 | 2025年金额 | 附注（如适用） | 2024年金额 | 2023年金额 |。 | 除同公司正常经营业务相关的有效套期保值业务外，非金融企业持有金融资产和金融负债产...",
+            "normalizedValue": null,
+            "unit": "原文",
+            "scope": "上市公司披露",
+            "relation": "unknown",
+            "limitations": [
+              "检索片段可能截断；需核对公告全文"
+            ],
+            "content": "| 扣除非经常性损益后的加权平均净资产收益率（%） | 32.52 | 36.03 | 减少3.51个百分点 | 34.20 |。报告期末公司前三年主要会计数据和财务指标的说明。 | 归属于上市公司股东的净利润 | 26,847,474,238.76 | 18,555,488,059.34 | 19,223,784,414.08 | 17,693,320,389.50 |。 | 归属于上市公司股东的扣除非经常性损益后的净利润 | 26,849,883,702.90 | 18,540,363,920.92 | 19,290,368,807.38 | 17,612,491,224.05 | | | 第一季度（1-3月份） | 第二季度（4-6月份） | 第三季度（7-9月份） | 第四季度（10-12月份） |。 季度数据与已披露定期报告数据差异说明。十、非经常性损益项目和金额。单位：元币种：人民币。| 非经常性损益项目 | 2025年金额 | 附注（如适用） | 2024年金额 | 2023年金额 |。 | 除同公司正常经营业务相关的有效套期保值业务外，非金融企业持有金融资产和金融负债产..."
+          }
+        ],
+        "data": {
+          "retrieved": 4,
+          "sourceCount": 2
+        }
+      }
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_4a2208b0-564",
+      "type": "step",
+      "status": "running",
+      "label": "正在评估证据并决定下一步",
+      "at": "2026-10-13T23:11:35.243Z"
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_31505e3f-7c9",
+      "type": "step",
+      "status": "running",
+      "label": "正在检索原始披露片段",
+      "at": "2026-10-13T23:11:37.381Z",
+      "data": {
+        "tool": "search_disclosures"
+      }
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_734c7cb2-87a",
+      "type": "evidence",
+      "status": "completed",
+      "label": "检索原始披露片段完成",
+      "at": "2026-10-13T23:11:38.989Z",
+      "data": {
+        "tool": "search_disclosures",
+        "ok": true,
+        "evidence": [
+          {
+            "id": "e_396e925e-9c8",
+            "sourceId": "notice:600519.SH:贵州茅台：贵州茅台2025年年度报告:2026-04-17",
+            "questionId": "disclosure",
+            "sourceType": "disclosure",
+            "title": "贵州茅台：贵州茅台2025年年度报告",
+            "sourceUrl": null,
+            "locator": "iFinD 语义检索片段，页码待原文确认",
+            "reportPeriod": "2025 / 2024",
+            "disclosedAt": "2026-04-17",
+            "fetchedAt": "2026-10-13T23:11:38.989Z",
+            "rawValue": "| 营业收入 | 168,838,102,514.79 | 170,899,152,276.34 | -1.21 | 147,693,604,994.14 |。 | 利润总额 | 114,755,261,605.08 | 119,638,578,194.46 | -4.08 | 103,662,553,689.81 |。 | 归属于上市公司股东的净利润 | 82,320,067,101.68 | 86,228,146,421.62 | -4.53 | 74,734,071,550.75 |。 | 营业收入 | 168,838,102,514.79 | 170,899,152,276.34 | -1.21 | 147,693,604,994.14 |。 | | 2025年末 | 2024年末 | 本期末比上年同期末增减（%） | 2023年末 |。 | 主要财务指标 | 2025年 | 2024年 | 本期比上年同期增减(%) | 2023年| | 主要财务指标 | 2025年 | 2024年 | 本期比上年同期增减(%) | 2023年 |。| 基本每股收益（元／股） | 65.66 ...",
+            "normalizedValue": null,
+            "unit": "原文",
+            "scope": "上市公司披露",
+            "relation": "unknown",
+            "limitations": [
+              "检索片段可能截断；需核对公告全文"
+            ],
+            "content": "| 营业收入 | 168,838,102,514.79 | 170,899,152,276.34 | -1.21 | 147,693,604,994.14 |。 | 利润总额 | 114,755,261,605.08 | 119,638,578,194.46 | -4.08 | 103,662,553,689.81 |。 | 归属于上市公司股东的净利润 | 82,320,067,101.68 | 86,228,146,421.62 | -4.53 | 74,734,071,550.75 |。 | 营业收入 | 168,838,102,514.79 | 170,899,152,276.34 | -1.21 | 147,693,604,994.14 |。 | | 2025年末 | 2024年末 | 本期末比上年同期末增减（%） | 2023年末 |。 | 主要财务指标 | 2025年 | 2024年 | 本期比上年同期增减(%) | 2023年| | 主要财务指标 | 2025年 | 2024年 | 本期比上年同期增减(%) | 2023年 |。| 基本每股收益（元／股） | 65.66 ..."
+          },
+          {
+            "id": "e_c1f5337d-960",
+            "sourceId": "notice:600519.SH:贵州茅台：贵州茅台2025年年度报告:2026-04-17",
+            "questionId": "disclosure",
+            "sourceType": "disclosure",
+            "title": "贵州茅台：贵州茅台2025年年度报告",
+            "sourceUrl": null,
+            "locator": "iFinD 语义检索片段，页码待原文确认",
+            "reportPeriod": "2025 / 2024",
+            "disclosedAt": "2026-04-17",
+            "fetchedAt": "2026-10-13T23:11:38.989Z",
+            "rawValue": "情况说明。本期国内增加的均为酱香系列酒经销商。(5).线上销售情况。单位：万元币种：人民币。| 线上销售平台 | 线上销售产品档次 | 本期销售收入 | 上期销售收入 | 同比（%） | 毛利率（%） | 。 未来将按照市场化原则逐步丰富i茅台上架产品矩阵。7、公司收入及成本分析。(1).按不同类型披露公司主营业务构成。单位：元 币种：人民币。 | 划分类型 | 营业收入 | 同比（%） | 营业成本 | 同比（%） | 毛利率（%） | 同比（%） |。| 按产品档次 | | | | | | | | 划分类型 | 营业收入 | 同比（%） | 营业成本 | 同比（%） | 毛利率（%） | 同比（%） |。| 按产品档次 | | | | | | |。 441.18 | 0.89 | 87.86 | -1.56| | 划分类型 | 营业收入 | 同比（%） | 营业成本 | 同比（%） | 毛利率（%） | 同比（%） |。| 按产品档次 | | | | | | |。 | 划分类型 | 营业收入 | 同比（%） | 营业成本 | 同比（%） | 毛利率（%） | 同比（%） |。| 按...",
+            "normalizedValue": null,
+            "unit": "原文",
+            "scope": "上市公司披露",
+            "relation": "unknown",
+            "limitations": [
+              "检索片段可能截断；需核对公告全文"
+            ],
+            "content": "情况说明。本期国内增加的均为酱香系列酒经销商。(5).线上销售情况。单位：万元币种：人民币。| 线上销售平台 | 线上销售产品档次 | 本期销售收入 | 上期销售收入 | 同比（%） | 毛利率（%） | 。 未来将按照市场化原则逐步丰富i茅台上架产品矩阵。7、公司收入及成本分析。(1).按不同类型披露公司主营业务构成。单位：元 币种：人民币。 | 划分类型 | 营业收入 | 同比（%） | 营业成本 | 同比（%） | 毛利率（%） | 同比（%） |。| 按产品档次 | | | | | | | | 划分类型 | 营业收入 | 同比（%） | 营业成本 | 同比（%） | 毛利率（%） | 同比（%） |。| 按产品档次 | | | | | | |。 441.18 | 0.89 | 87.86 | -1.56| | 划分类型 | 营业收入 | 同比（%） | 营业成本 | 同比（%） | 毛利率（%） | 同比（%） |。| 按产品档次 | | | | | | |。 | 划分类型 | 营业收入 | 同比（%） | 营业成本 | 同比（%） | 毛利率（%） | 同比（%） |。| 按..."
+          },
+          {
+            "id": "e_1c28d9f7-59c",
+            "sourceId": "notice:600519.SH:贵州茅台：贵州茅台2025年年度报告:2026-04-17",
+            "questionId": "disclosure",
+            "sourceType": "disclosure",
+            "title": "贵州茅台：贵州茅台2025年年度报告",
+            "sourceUrl": null,
+            "locator": "iFinD 语义检索片段，页码待原文确认",
+            "reportPeriod": "2025 / 2024",
+            "disclosedAt": "2026-04-17",
+            "fetchedAt": "2026-10-13T23:11:38.989Z",
+            "rawValue": "| 分行业 | 营业收入 | 营业成本 | 毛利率（%） | 营业收入比上年增减（%） | 营业成本比上年增减（%） | 毛利率比上年增减（%）| | 主营业务分行业情况 | | | | | | |。| 分行业 | 营业收入 | 营业成本 | 毛利率（%） | 营业收入比上年增减（%） | 营业成本比上年增减（%） | 毛利率比上年增减（%） |。 | 主营业务分产品情况 | | | | | | |。| 分产品 | 营业收入 | 营业成本 | 毛利率（%） | 营业收入比上年增减（%） | 营业成本比上年增减（%） | 毛利率比上年增减（%） |。 | 主营业务分行业情况 | | | | | | |。| 分行业 | 营业收入 | 营业成本 | 毛利率（%） | 营业收入比上年增减（%） | 营业成本比上年增减（%） | 毛利率比上年增减（%） |。 | 主营业务分行业情况 | | | | | | |。| 分行业 | 营业收入 | 营业成本 | 毛利率（%） | 营业收入比上年增减（%） | 营业成本比上年增减（%） | 毛利率比上年增减（%） |。 | 销售模式 | 营业收入 | 营业...",
+            "normalizedValue": null,
+            "unit": "原文",
+            "scope": "上市公司披露",
+            "relation": "unknown",
+            "limitations": [
+              "检索片段可能截断；需核对公告全文"
+            ],
+            "content": "| 分行业 | 营业收入 | 营业成本 | 毛利率（%） | 营业收入比上年增减（%） | 营业成本比上年增减（%） | 毛利率比上年增减（%）| | 主营业务分行业情况 | | | | | | |。| 分行业 | 营业收入 | 营业成本 | 毛利率（%） | 营业收入比上年增减（%） | 营业成本比上年增减（%） | 毛利率比上年增减（%） |。 | 主营业务分产品情况 | | | | | | |。| 分产品 | 营业收入 | 营业成本 | 毛利率（%） | 营业收入比上年增减（%） | 营业成本比上年增减（%） | 毛利率比上年增减（%） |。 | 主营业务分行业情况 | | | | | | |。| 分行业 | 营业收入 | 营业成本 | 毛利率（%） | 营业收入比上年增减（%） | 营业成本比上年增减（%） | 毛利率比上年增减（%） |。 | 主营业务分行业情况 | | | | | | |。| 分行业 | 营业收入 | 营业成本 | 毛利率（%） | 营业收入比上年增减（%） | 营业成本比上年增减（%） | 毛利率比上年增减（%） |。 | 销售模式 | 营业收入 | 营业..."
+          },
+          {
+            "id": "e_cb561bb9-25d",
+            "sourceId": "notice:600519.SH:贵州茅台：贵州茅台2025年年度报告:2026-04-17",
+            "questionId": "disclosure",
+            "sourceType": "disclosure",
+            "title": "贵州茅台：贵州茅台2025年年度报告",
+            "sourceUrl": null,
+            "locator": "iFinD 语义检索片段，页码待原文确认",
+            "reportPeriod": "2025 / 2024",
+            "disclosedAt": "2026-04-17",
+            "fetchedAt": "2026-10-13T23:11:38.989Z",
+            "rawValue": "2、境外资产情况。(1).资产规模。其中：境外资产101,952,616.79（单位：元 币种：人民币），占总资产的比例为0.03%。(2).境外资产占比较高的相关说明。3、截至报告期末主要资产受限情况。 详见第八节财务报告七、合并财务报表项目注释27、所有权或使用权受限资产。(四)行业经营性信息分析。酒制造行业经营性信息分析。1、行业基本情况。根据国家统计局数据，2025年全国规模以上白酒企业累计产量354.9万千升。 说明：（1）2025年茅台酒基酒设计产能为46,395.00吨，同比新增基酒产能1,800.00吨，新增产能于2025年10月投产，由于茅台酒的生产工艺特点，将在2026年释放； 2025年系列酒基酒设计产能为59,400.00吨，同比新增基酒产能6,940.00吨，新增产能于2025年12月投产，由于系列酒的生产工艺特点，将在2026年释放。 | 产品档次 | 产量（吨） | 同比（%） | 销量（吨） | 同比（%） | 产销率(%) | 销售收入 | 同比（%） | 主要代表品牌| | 产品档次 | 产量（吨） | 同比（%） | 销量（吨） | 同比（%） |...",
+            "normalizedValue": null,
+            "unit": "原文",
+            "scope": "上市公司披露",
+            "relation": "unknown",
+            "limitations": [
+              "检索片段可能截断；需核对公告全文"
+            ],
+            "content": "2、境外资产情况。(1).资产规模。其中：境外资产101,952,616.79（单位：元 币种：人民币），占总资产的比例为0.03%。(2).境外资产占比较高的相关说明。3、截至报告期末主要资产受限情况。 详见第八节财务报告七、合并财务报表项目注释27、所有权或使用权受限资产。(四)行业经营性信息分析。酒制造行业经营性信息分析。1、行业基本情况。根据国家统计局数据，2025年全国规模以上白酒企业累计产量354.9万千升。 说明：（1）2025年茅台酒基酒设计产能为46,395.00吨，同比新增基酒产能1,800.00吨，新增产能于2025年10月投产，由于茅台酒的生产工艺特点，将在2026年释放； 2025年系列酒基酒设计产能为59,400.00吨，同比新增基酒产能6,940.00吨，新增产能于2025年12月投产，由于系列酒的生产工艺特点，将在2026年释放。 | 产品档次 | 产量（吨） | 同比（%） | 销量（吨） | 同比（%） | 产销率(%) | 销售收入 | 同比（%） | 主要代表品牌| | 产品档次 | 产量（吨） | 同比（%） | 销量（吨） | 同比（%） |..."
+          }
+        ],
+        "data": {
+          "retrieved": 4,
+          "sourceCount": 1
+        }
+      }
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_0e6eed30-aa8",
+      "type": "step",
+      "status": "running",
+      "label": "正在评估证据并决定下一步",
+      "at": "2026-10-13T23:11:39.022Z"
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_dd45c9ce-755",
+      "type": "conclusion",
+      "status": "completed",
+      "label": "已形成可追溯结论",
+      "at": "2026-10-13T23:11:49.077Z",
+      "data": {
+        "verdict": "不支持",
+        "summary": "基于2025年与2024年年报数据，贵州茅台2025年度归母净利润并未增长，反而同比下降4.53%（823.20亿元 vs 862.28亿元）。扣非归母净利润也同比下降4.58%，与归母净利润方向一致，但都不是增长。同期营业收入同比下降1.21%，毛利率也小幅回落，经营活动现金流净额同比下降33.46%。非经常性损益规模较小，不足以解释利润变化，更不能支持“净利润增长主要来自主营业务改善”这一前提。",
+        "claims": [
+          {
+            "text": "贵州茅台2025年度归母净利润没有增长，而是同比下降4.53%。",
+            "evidenceIds": [
+              "e_32fae809-fa4",
+              "e_d90c0c7e-2d8",
+              "e_5afe78a1-826"
+            ],
+            "relation": "oppose"
+          },
+          {
+            "text": "扣非归母净利润同样同比下降4.58%，与归母净利润方向一致，但这说明2025年并不存在“利润增长”前提。",
+            "evidenceIds": [
+              "e_5afe78a1-826",
+              "e_3fec8479-044"
+            ],
+            "relation": "oppose"
+          },
+          {
+            "text": "2025年营业收入同比下降1.21%，毛利率也从91.93%降至91.18%，主营业务经营指标并未体现改善。",
+            "evidenceIds": [
+              "e_669bb0ea-d62",
+              "e_92d19661-f08",
+              "e_cc02a110-20d",
+              "e_77f89f22-2f1"
+            ],
+            "relation": "oppose"
+          },
+          {
+            "text": "经营活动现金流净额同比下降33.46%，现金流质量没有同步增强，难以作为利润改善的佐证。",
+            "evidenceIds": [
+              "e_41a7680f-435",
+              "e_b0403a34-8ad"
+            ],
+            "relation": "oppose"
+          },
+          {
+            "text": "非经常性损益项目中，政府补助、金融资产相关损益、资产处置等项目规模相对有限，未见其主导2025年利润变动。",
+            "evidenceIds": [
+              "e_92a9b931-0cd",
+              "e_d57efeb8-ecb",
+              "e_501dd62f-853"
+            ],
+            "relation": "oppose"
+          }
+        ],
+        "conflicts": [
+          {
+            "description": "用户命题假设2025年度归母净利润增长，但财务数据表明归母净利润实际下滑。",
+            "evidenceIds": [
+              "e_32fae809-fa4",
+              "e_d90c0c7e-2d8",
+              "e_5afe78a1-826"
+            ],
+            "resolution": "前提不成立，因此无需继续论证“增长主要来自主营业务改善”；应改为评估“2025年利润下滑主要由哪些经营因素导致”。"
+          },
+          {
+            "description": "非经常性损益存在一定金融资产相关收益，但金额相对归母净利润体量较小，且不足以扭转整体利润下行。",
+            "evidenceIds": [
+              "e_d57efeb8-ecb",
+              "e_501dd62f-853",
+              "e_5afe78a1-826"
+            ],
+            "resolution": "这些项目可作为补充解释，但不能构成对“利润增长来自主营业务改善”的支持。"
+          }
+        ],
+        "limitations": [
+          "未逐页核验年报全文，仅基于工具返回的财务数据、语义检索片段和官方原文链接定位；片段可能截断。",
+          "缺少完整的分产品/分业务收入与毛利率明细表全文，因此对“主营业务改善”的拆解只能基于已取到的总收入、毛利率、现金流和相关披露片段判断。",
+          "原文链接已定位，但原文证据仅用于溯源，不单独作为支持或反对结论的依据。"
+        ],
+        "revisionTriggers": [
+          {
+            "condition": "若后续核验到2025年正式年报中的归母净利润口径与当前工具数据存在重大差异",
+            "effect": "需要重新计算同比变动并重判命题。"
+          },
+          {
+            "condition": "若补充取得完整分产品/分业务收入、毛利率、投资收益及非经常性损益附注，且显示利润确有增长",
+            "effect": "可重新判断增长来源是否主要来自主营业务改善。"
+          },
+          {
+            "condition": "若用户改问“2025年利润下滑的主要原因是什么”",
+            "effect": "应转为分析收入、成本、费用、投资收益和现金流对利润下滑的贡献。"
+          }
+        ]
+      }
+    },
+    {
+      "runId": "run_44b7c6f1-29a",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "step_6f7e43b0-982",
+      "type": "done",
+      "status": "stopped",
+      "label": "已达到工具预算，保留当前结论与未完成项",
+      "at": "2026-10-13T23:11:49.098Z"
+    },
+    {
+      "runId": "validation",
+      "versionId": "884f1018-71f1-45fb-b779-082ec65f232a",
+      "stepId": "unit-check",
+      "type": "step",
+      "status": "completed",
+      "label": "金额复核：依据原始元金额修正摘要亿元换算，原始字段保留",
+      "at": "2026-10-13T23:43:00Z"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "e_669bb0ea-d62",
+      "sourceId": "report:600519.SH:2025:annual",
+      "questionId": "financial",
+      "sourceType": "financial",
+      "title": "2025 年度 · 营业收入",
+      "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+      "locator": "income-statements / 2025 / operating_income",
+      "reportPeriod": "2025 FY",
+      "disclosedAt": "2026-04-16",
+      "fetchedAt": "2026-10-13T23:11:00.623Z",
+      "rawValue": "168838102514.79",
+      "normalizedValue": 168838102514.79,
+      "unit": "元",
+      "scope": "年度累计 · 合并报表 · CNY",
+      "relation": "oppose",
+      "limitations": [],
+      "content": "营业收入：168838102514.79 元；原始字段 operating_income。"
+    },
+    {
+      "id": "e_cc02a110-20d",
+      "sourceId": "report:600519.SH:2025:annual",
+      "questionId": "financial",
+      "sourceType": "financial",
+      "title": "2025 年度 · 营业成本",
+      "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+      "locator": "income-statements / 2025 / operating_costs",
+      "reportPeriod": "2025 FY",
+      "disclosedAt": "2026-04-16",
+      "fetchedAt": "2026-10-13T23:11:00.623Z",
+      "rawValue": "14892277570.91",
+      "normalizedValue": 14892277570.91,
+      "unit": "元",
+      "scope": "年度累计 · 合并报表 · CNY",
+      "relation": "oppose",
+      "limitations": [],
+      "content": "营业成本：14892277570.91 元；原始字段 operating_costs。"
+    },
+    {
+      "id": "e_91a35ca8-49b",
+      "sourceId": "report:600519.SH:2025:annual",
+      "questionId": "financial",
+      "sourceType": "financial",
+      "title": "2025 年度 · 营业利润",
+      "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+      "locator": "income-statements / 2025 / operating_profit",
+      "reportPeriod": "2025 FY",
+      "disclosedAt": "2026-04-16",
+      "fetchedAt": "2026-10-13T23:11:00.623Z",
+      "rawValue": "114808950164.24",
+      "normalizedValue": 114808950164.24,
+      "unit": "元",
+      "scope": "年度累计 · 合并报表 · CNY",
+      "relation": "unknown",
+      "limitations": [],
+      "content": "营业利润：114808950164.24 元；原始字段 operating_profit。"
+    },
+    {
+      "id": "e_4f80b222-ce5",
+      "sourceId": "report:600519.SH:2025:annual",
+      "questionId": "financial",
+      "sourceType": "financial",
+      "title": "2025 年度 · 利润总额",
+      "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+      "locator": "income-statements / 2025 / profit_total",
+      "reportPeriod": "2025 FY",
+      "disclosedAt": "2026-04-16",
+      "fetchedAt": "2026-10-13T23:11:00.623Z",
+      "rawValue": "114755261605.08",
+      "normalizedValue": 114755261605.08,
+      "unit": "元",
+      "scope": "年度累计 · 合并报表 · CNY",
+      "relation": "unknown",
+      "limitations": [],
+      "content": "利润总额：114755261605.08 元；原始字段 profit_total。"
+    },
+    {
+      "id": "e_258f0041-946",
+      "sourceId": "report:600519.SH:2025:annual",
+      "questionId": "financial",
+      "sourceType": "financial",
+      "title": "2025 年度 · 净利润",
+      "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+      "locator": "income-statements / 2025 / net_profit",
+      "reportPeriod": "2025 FY",
+      "disclosedAt": "2026-04-16",
+      "fetchedAt": "2026-10-13T23:11:00.623Z",
+      "rawValue": "85310324833.67",
+      "normalizedValue": 85310324833.67,
+      "unit": "元",
+      "scope": "年度累计 · 合并报表 · CNY",
+      "relation": "unknown",
+      "limitations": [],
+      "content": "净利润：85310324833.67 元；原始字段 net_profit。"
+    },
+    {
+      "id": "e_32fae809-fa4",
+      "sourceId": "report:600519.SH:2025:annual",
+      "questionId": "financial",
+      "sourceType": "financial",
+      "title": "2025 年度 · 归母净利润",
+      "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+      "locator": "income-statements / 2025 / parent_holder_net_profit",
+      "reportPeriod": "2025 FY",
+      "disclosedAt": "2026-04-16",
+      "fetchedAt": "2026-10-13T23:11:00.623Z",
+      "rawValue": "82320067101.68",
+      "normalizedValue": 82320067101.68,
+      "unit": "元",
+      "scope": "年度累计 · 合并报表 · CNY",
+      "relation": "oppose",
+      "limitations": [],
+      "content": "归母净利润：82320067101.68 元；原始字段 parent_holder_net_profit。"
+    },
+    {
+      "id": "e_021d0033-e25",
+      "sourceId": "report:600519.SH:2025:annual",
+      "questionId": "financial",
+      "sourceType": "financial",
+      "title": "2025 年度 · 销售费用",
+      "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+      "locator": "income-statements / 2025 / sales_fee",
+      "reportPeriod": "2025 FY",
+      "disclosedAt": "2026-04-16",
+      "fetchedAt": "2026-10-13T23:11:00.623Z",
+      "rawValue": "7253499600.68",
+      "normalizedValue": 7253499600.68,
+      "unit": "元",
+      "scope": "年度累计 · 合并报表 · CNY",
+      "relation": "unknown",
+      "limitations": [],
+      "content": "销售费用：7253499600.68 元；原始字段 sales_fee。"
+    },
+    {
+      "id": "e_49a445ac-341",
+      "sourceId": "report:600519.SH:2025:annual",
+      "questionId": "financial",
+      "sourceType": "financial",
+      "title": "2025 年度 · 管理费用",
+      "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+      "locator": "income-statements / 2025 / manage_fee",
+      "reportPeriod": "2025 FY",
+      "disclosedAt": "2026-04-16",
+      "fetchedAt": "2026-10-13T23:11:00.623Z",
+      "rawValue": "8320061659.66",
+      "normalizedValue": 8320061659.66,
+      "unit": "元",
+      "scope": "年度累计 · 合并报表 · CNY",
+      "relation": "unknown",
+      "limitations": [],
+      "content": "管理费用：8320061659.66 元；原始字段 manage_fee。"
+    },
+    {
+      "id": "e_c758e7a9-f5d",
+      "sourceId": "report:600519.SH:2025:annual",
+      "questionId": "financial",
+      "sourceType": "financial",
+      "title": "2025 年度 · 研发费用",
+      "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+      "locator": "income-statements / 2025 / research_and_development_expenses",
+      "reportPeriod": "2025 FY",
+      "disclosedAt": "2026-04-16",
+      "fetchedAt": "2026-10-13T23:11:00.623Z",
+      "rawValue": "190112246.58",
+      "normalizedValue": 190112246.58,
+      "unit": "元",
+      "scope": "年度累计 · 合并报表 · CNY",
+      "relation": "unknown",
+      "limitations": [],
+      "content": "研发费用：190112246.58 元；原始字段 research_and_development_expenses。"
+    },
+    {
+      "id": "e_92d19661-f08",
+      "sourceId": "report:600519.SH:2024:annual",
+      "questionId": "financial",
+      "sourceType": "financial",
+      "title": "2024 年度 · 营业收入",
+      "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+      "locator": "income-statements / 2024 / operating_income",
+      "reportPeriod": "2024 FY",
+      "disclosedAt": "2026-04-16",
+      "fetchedAt": "2026-10-13T23:11:00.623Z",
+      "rawValue": "170899152276.34",
+      "normalizedValue": 170899152276.34,
+      "unit": "元",
+      "scope": "年度累计 · 合并报表 · CNY",
+      "relation": "oppose",
+      "limitations": [],
+      "content": "营业收入：170899152276.34 元；原始字段 operating_income。"
+    },
+    {
+      "id": "e_77f89f22-2f1",
+      "sourceId": "report:600519.SH:2024:annual",
+      "questionId": "financial",
+      "sourceType": "financial",
+      "title": "2024 年度 · 营业成本",
+      "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+      "locator": "income-statements / 2024 / operating_costs",
+      "reportPeriod": "2024 FY",
+      "disclosedAt": "2026-04-16",
+      "fetchedAt": "2026-10-13T23:11:00.623Z",
+      "rawValue": "13789482367.98",
+      "normalizedValue": 13789482367.98,
+      "unit": "元",
+      "scope": "年度累计 · 合并报表 · CNY",
+      "relation": "oppose",
+      "limitations": [],
+      "content": "营业成本：13789482367.98 元；原始字段 operating_costs。"
+    },
+    {
+      "id": "e_68ca1756-ce8",
+      "sourceId": "report:600519.SH:2024:annual",
+      "questionId": "financial",
+      "sourceType": "financial",
+      "title": "2024 年度 · 营业利润",
+      "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+      "locator": "income-statements / 2024 / operating_profit",
+      "reportPeriod": "2024 FY",
+      "disclosedAt": "2026-04-16",
+      "fetchedAt": "2026-10-13T23:11:00.623Z",
+      "rawValue": "119688579453.23",
+      "normalizedValue": 119688579453.23,
+      "unit": "元",
+      "scope": "年度累计 · 合并报表 · CNY",
+      "relation": "unknown",
+      "limitations": [],
+      "content": "营业利润：119688579453.23 元；原始字段 operating_profit。"
+    },
+    {
+      "id": "e_0539a97a-b3d",
+      "sourceId": "report:600519.SH:2024:annual",
+      "questionId": "financial",
+      "sourceType": "financial",
+      "title": "2024 年度 · 利润总额",
+      "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+      "locator": "income-statements / 2024 / profit_total",
+      "reportPeriod": "2024 FY",
+      "disclosedAt": "2026-04-16",
+      "fetchedAt": "2026-10-13T23:11:00.623Z",
+      "rawValue": "119638578194.46",
+      "normalizedValue": 119638578194.46,
+      "unit": "元",
+      "scope": "年度累计 · 合并报表 · CNY",
+      "relation": "unknown",
+      "limitations": [],
+      "content": "利润总额：119638578194.46 元；原始字段 profit_total。"
+    },
+    {
+      "id": "e_85cb3a0e-8fc",
+      "sourceId": "report:600519.SH:2024:annual",
+      "questionId": "financial",
+      "sourceType": "financial",
+      "title": "2024 年度 · 净利润",
+      "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+      "locator": "income-statements / 2024 / net_profit",
+      "reportPeriod": "2024 FY",
+      "disclosedAt": "2026-04-16",
+      "fetchedAt": "2026-10-13T23:11:00.623Z",
+      "rawValue": "89334728025.9",
+      "normalizedValue": 89334728025.9,
+      "unit": "元",
+      "scope": "年度累计 · 合并报表 · CNY",
+      "relation": "unknown",
+      "limitations": [],
+      "content": "净利润：89334728025.9 元；原始字段 net_profit。"
+    },
+    {
+      "id": "e_d90c0c7e-2d8",
+      "sourceId": "report:600519.SH:2024:annual",
+      "questionId": "financial",
+      "sourceType": "financial",
+      "title": "2024 年度 · 归母净利润",
+      "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+      "locator": "income-statements / 2024 / parent_holder_net_profit",
+      "reportPeriod": "2024 FY",
+      "disclosedAt": "2026-04-16",
+      "fetchedAt": "2026-10-13T23:11:00.623Z",
+      "rawValue": "86228146421.62",
+      "normalizedValue": 86228146421.62,
+      "unit": "元",
+      "scope": "年度累计 · 合并报表 · CNY",
+      "relation": "oppose",
+      "limitations": [],
+      "content": "归母净利润：86228146421.62 元；原始字段 parent_holder_net_profit。"
+    },
+    {
+      "id": "e_3b7e1a7c-59f",
+      "sourceId": "report:600519.SH:2024:annual",
+      "questionId": "financial",
+      "sourceType": "financial",
+      "title": "2024 年度 · 销售费用",
+      "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+      "locator": "income-statements / 2024 / sales_fee",
+      "reportPeriod": "2024 FY",
+      "disclosedAt": "2026-04-16",
+      "fetchedAt": "2026-10-13T23:11:00.623Z",
+      "rawValue": "5639300059.49",
+      "normalizedValue": 5639300059.49,
+      "unit": "元",
+      "scope": "年度累计 · 合并报表 · CNY",
+      "relation": "unknown",
+      "limitations": [],
+      "content": "销售费用：5639300059.49 元；原始字段 sales_fee。"
+    },
+    {
+      "id": "e_d0f82b22-e0e",
+      "sourceId": "report:600519.SH:2024:annual",
+      "questionId": "financial",
+      "sourceType": "financial",
+      "title": "2024 年度 · 管理费用",
+      "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+      "locator": "income-statements / 2024 / manage_fee",
+      "reportPeriod": "2024 FY",
+      "disclosedAt": "2026-04-16",
+      "fetchedAt": "2026-10-13T23:11:00.623Z",
+      "rawValue": "9315650060.38",
+      "normalizedValue": 9315650060.38,
+      "unit": "元",
+      "scope": "年度累计 · 合并报表 · CNY",
+      "relation": "unknown",
+      "limitations": [],
+      "content": "管理费用：9315650060.38 元；原始字段 manage_fee。"
+    },
+    {
+      "id": "e_a1265e70-bfb",
+      "sourceId": "report:600519.SH:2024:annual",
+      "questionId": "financial",
+      "sourceType": "financial",
+      "title": "2024 年度 · 研发费用",
+      "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+      "locator": "income-statements / 2024 / research_and_development_expenses",
+      "reportPeriod": "2024 FY",
+      "disclosedAt": "2026-04-16",
+      "fetchedAt": "2026-10-13T23:11:00.623Z",
+      "rawValue": "218375472.87",
+      "normalizedValue": 218375472.87,
+      "unit": "元",
+      "scope": "年度累计 · 合并报表 · CNY",
+      "relation": "unknown",
+      "limitations": [],
+      "content": "研发费用：218375472.87 元；原始字段 research_and_development_expenses。"
+    },
+    {
+      "id": "e_41a7680f-435",
+      "sourceId": "report:600519.SH:2025:annual",
+      "questionId": "financial",
+      "sourceType": "financial",
+      "title": "2025 年度 · 经营活动现金流净额",
+      "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+      "locator": "cash-flow-statements / 2025 / act_cash_flow_net",
+      "reportPeriod": "2025 FY",
+      "disclosedAt": "2026-04-16",
+      "fetchedAt": "2026-10-13T23:11:00.939Z",
+      "rawValue": "61522204989.35",
+      "normalizedValue": 61522204989.35,
+      "unit": "元",
+      "scope": "年度累计 · 合并报表 · CNY",
+      "relation": "oppose",
+      "limitations": [],
+      "content": "经营活动现金流净额：61522204989.35 元；原始字段 act_cash_flow_net。"
+    },
+    {
+      "id": "e_b0403a34-8ad",
+      "sourceId": "report:600519.SH:2024:annual",
+      "questionId": "financial",
+      "sourceType": "financial",
+      "title": "2024 年度 · 经营活动现金流净额",
+      "sourceUrl": "https://fuyao.aicubes.cn/docs/api-reference/financials/",
+      "locator": "cash-flow-statements / 2024 / act_cash_flow_net",
+      "reportPeriod": "2024 FY",
+      "disclosedAt": "2026-04-16",
+      "fetchedAt": "2026-10-13T23:11:00.939Z",
+      "rawValue": "92463692168.43",
+      "normalizedValue": 92463692168.43,
+      "unit": "元",
+      "scope": "年度累计 · 合并报表 · CNY",
+      "relation": "oppose",
+      "limitations": [],
+      "content": "经营活动现金流净额：92463692168.43 元；原始字段 act_cash_flow_net。"
+    },
+    {
+      "id": "e_92a9b931-0cd",
+      "sourceId": "notice:600519.SH:贵州茅台：贵州茅台2025年年度报告:2026-04-17",
+      "questionId": "disclosure",
+      "sourceType": "disclosure",
+      "title": "贵州茅台：贵州茅台2025年年度报告",
+      "sourceUrl": null,
+      "locator": "iFinD 语义检索片段，页码待原文确认",
+      "reportPeriod": "2025 / 2024",
+      "disclosedAt": "2026-04-17",
+      "fetchedAt": "2026-10-13T23:11:06.094Z",
+      "rawValue": "八、境内外会计准则下会计数据差异。(一)同时按照国际会计准则与按中国会计准则披露的财务报告中净利润和归属于上市公司股东的净资产差异情况。 (二)同时按照境外会计准则与按中国会计准则披露的财务报告中净利润和归属于上市公司股东的净资产差异情况。(三)境内外会计准则差异的说明：。九、2025年分季度主要财务数据。单位：元币种：人民币。 季度数据与已披露定期报告数据差异说明。十、非经常性损益项目和金额。单位：元币种：人民币。| 非经常性损益项目 | 2025年金额 | 附注（如适用） | 2024年金额 | 2023年金额 |。 | 计入当期损益的政府补助，但与公司正常经营业务密切相关、符合国家政策规定、按照确定的标准享有、对公司损益产生持续影响的政府补助除外 | 4,271,947.79 | | 4,539,419.20 | 17,137,523.89 | | 除同公司正常经营业务相关的有效套期保值业务外，非金融企业持有金融资产和金融负债产生的公允价值变动损益以及处置金融资产和金融负债产生的损益 | 76,162,597.66 | | 26,539,092.99 | 2, 439,902.5...",
+      "normalizedValue": null,
+      "unit": "原文",
+      "scope": "上市公司披露",
+      "relation": "oppose",
+      "limitations": [
+        "检索片段可能截断；需核对公告全文"
+      ],
+      "content": "八、境内外会计准则下会计数据差异。(一)同时按照国际会计准则与按中国会计准则披露的财务报告中净利润和归属于上市公司股东的净资产差异情况。 (二)同时按照境外会计准则与按中国会计准则披露的财务报告中净利润和归属于上市公司股东的净资产差异情况。(三)境内外会计准则差异的说明：。九、2025年分季度主要财务数据。单位：元币种：人民币。 季度数据与已披露定期报告数据差异说明。十、非经常性损益项目和金额。单位：元币种：人民币。| 非经常性损益项目 | 2025年金额 | 附注（如适用） | 2024年金额 | 2023年金额 |。 | 计入当期损益的政府补助，但与公司正常经营业务密切相关、符合国家政策规定、按照确定的标准享有、对公司损益产生持续影响的政府补助除外 | 4,271,947.79 | | 4,539,419.20 | 17,137,523.89 | | 除同公司正常经营业务相关的有效套期保值业务外，非金融企业持有金融资产和金融负债产生的公允价值变动损益以及处置金融资产和金融负债产生的损益 | 76,162,597.66 | | 26,539,092.99 | 2, 439,902.5..."
+    },
+    {
+      "id": "e_d57efeb8-ecb",
+      "sourceId": "notice:600519.SH:贵州茅台：贵州茅台2025年年度报告:2026-04-17",
+      "questionId": "disclosure",
+      "sourceType": "disclosure",
+      "title": "贵州茅台：贵州茅台2025年年度报告",
+      "sourceUrl": null,
+      "locator": "iFinD 语义检索片段，页码待原文确认",
+      "reportPeriod": "2025 / 2024",
+      "disclosedAt": "2026-04-17",
+      "fetchedAt": "2026-10-13T23:11:06.094Z",
+      "rawValue": "季度数据与已披露定期报告数据差异说明。十、非经常性损益项目和金额。单位：元币种：人民币。| 非经常性损益项目 | 2025年金额 | 附注（如适用） | 2024年金额 | 2023年金额 |。 | 除同公司正常经营业务相关的有效套期保值业务外，非金融企业持有金融资产和金融负债产生的公允价值变动损益以及处置金融资产和金融负债产生的损益 | 76,162,597.66 | | 26,539,092.99 | 2, 439,902.57 |。| 除上述各项之外的其他营业外收入和支出 | -48,197,347.69 | | -42,713,924.90 | -47,733,771.71 |。 以及将《公开发行证券的公司信息披露解释性公告第1号——非经常性损益》中列举的非经常性损益项目界定为经常性损益的项目，应说明原因。十一、存在股权激励、员工持股计划的公司可选择披露扣除股份支付影响后的净利润。 主导产品“贵州茅台酒”是我国大曲酱香型白酒的鼻祖和典型代表，集国家地理标志产品、有机食品和国家非物质文化遗产于一身，公司营销网络覆盖国内市场及五大洲66个国家和地区。 2025年度，公司经营模式为：...",
+      "normalizedValue": null,
+      "unit": "原文",
+      "scope": "上市公司披露",
+      "relation": "oppose",
+      "limitations": [
+        "检索片段可能截断；需核对公告全文"
+      ],
+      "content": "季度数据与已披露定期报告数据差异说明。十、非经常性损益项目和金额。单位：元币种：人民币。| 非经常性损益项目 | 2025年金额 | 附注（如适用） | 2024年金额 | 2023年金额 |。 | 除同公司正常经营业务相关的有效套期保值业务外，非金融企业持有金融资产和金融负债产生的公允价值变动损益以及处置金融资产和金融负债产生的损益 | 76,162,597.66 | | 26,539,092.99 | 2, 439,902.57 |。| 除上述各项之外的其他营业外收入和支出 | -48,197,347.69 | | -42,713,924.90 | -47,733,771.71 |。 以及将《公开发行证券的公司信息披露解释性公告第1号——非经常性损益》中列举的非经常性损益项目界定为经常性损益的项目，应说明原因。十一、存在股权激励、员工持股计划的公司可选择披露扣除股份支付影响后的净利润。 主导产品“贵州茅台酒”是我国大曲酱香型白酒的鼻祖和典型代表，集国家地理标志产品、有机食品和国家非物质文化遗产于一身，公司营销网络覆盖国内市场及五大洲66个国家和地区。 2025年度，公司经营模式为：..."
+    },
+    {
+      "id": "e_501dd62f-853",
+      "sourceId": "notice:600519.SH:贵州茅台：贵州茅台2025年年度报告:2026-04-17",
+      "questionId": "disclosure",
+      "sourceType": "disclosure",
+      "title": "贵州茅台：贵州茅台2025年年度报告",
+      "sourceUrl": null,
+      "locator": "iFinD 语义检索片段，页码待原文确认",
+      "reportPeriod": "2025 / 2024",
+      "disclosedAt": "2026-04-17",
+      "fetchedAt": "2026-10-13T23:11:06.094Z",
+      "rawValue": "十九、 补充资料。1、当期非经常性损益明细表。单位：元币种：人民币。| 项目 | 金额 | 说明 | 。| 非流动性资产处置损益，包括已计提资产减值准备的冲销部分 | -2,384,586.28 | | 。 | 除同公司正常经营业务相关的有效套期保值业务外，非金融企业持有金融资产和金融负债产生的公允价值变动损益以及处置金融资产和金融负债产生的损益 | 76,162,597.66 | | 。 对公司将《公开发行证券的公司信息披露解释性公告第1号——非经常性损益》未列举的项目认定为非经常性损益项目且金额重大的， | 合计 | 26,959,446.43 | |。对公司将《公开发行证券的公司信息披露解释性公告第1号——非经常性损益》未列举的项目认定为非经常性损益项目且金额重大的， 以及将《公开发行证券的公司信息披露解释性公告第1号——非经常性损益》中列举的非经常性损益项目界定为经常性损益的项目，应说明原因。2、净资产收益率及每股收益。 | 扣除非经常性损益后归属于公司普通股股东的净利润 | 32.52 | 65.64 | 65.64 |。3、境内外会计准则下会计数据差异。董事长：陈华。董事会...",
+      "normalizedValue": null,
+      "unit": "原文",
+      "scope": "上市公司披露",
+      "relation": "oppose",
+      "limitations": [
+        "检索片段可能截断；需核对公告全文"
+      ],
+      "content": "十九、 补充资料。1、当期非经常性损益明细表。单位：元币种：人民币。| 项目 | 金额 | 说明 | 。| 非流动性资产处置损益，包括已计提资产减值准备的冲销部分 | -2,384,586.28 | | 。 | 除同公司正常经营业务相关的有效套期保值业务外，非金融企业持有金融资产和金融负债产生的公允价值变动损益以及处置金融资产和金融负债产生的损益 | 76,162,597.66 | | 。 对公司将《公开发行证券的公司信息披露解释性公告第1号——非经常性损益》未列举的项目认定为非经常性损益项目且金额重大的， | 合计 | 26,959,446.43 | |。对公司将《公开发行证券的公司信息披露解释性公告第1号——非经常性损益》未列举的项目认定为非经常性损益项目且金额重大的， 以及将《公开发行证券的公司信息披露解释性公告第1号——非经常性损益》中列举的非经常性损益项目界定为经常性损益的项目，应说明原因。2、净资产收益率及每股收益。 | 扣除非经常性损益后归属于公司普通股股东的净利润 | 32.52 | 65.64 | 65.64 |。3、境内外会计准则下会计数据差异。董事长：陈华。董事会..."
+    },
+    {
+      "id": "e_8b19853a-d23",
+      "sourceId": "notice:600519.SH:贵州茅台：贵州茅台2025年年度报告摘要:2026-04-17",
+      "questionId": "disclosure",
+      "sourceType": "disclosure",
+      "title": "贵州茅台：贵州茅台2025年年度报告摘要",
+      "sourceUrl": null,
+      "locator": "iFinD 语义检索片段，页码待原文确认",
+      "reportPeriod": "2025 / 2024",
+      "disclosedAt": "2026-04-17",
+      "fetchedAt": "2026-10-13T23:11:06.094Z",
+      "rawValue": "公司坚持“生态优先、绿色发展”，坚持走好科技创新驱动发展的绿色发展道路，引领打造赤水河生态名片，用更先进方法和技术永葆环境竞争力。 建立生态环保制度地图，加大新技术新工艺引进研发，完善生态环境一体化监控网络，走出了国家级“绿色工厂”科技创新驱动的“双碳”路径。 持续开展流域微生物、水生物、植物植被的科学研究，全力守护流域生物多样性和稳定性，全力维护茅台酒赖以生存的生态系统平衡。3、公司主要会计数据和财务指标。3.1近3年的主要会计数据和财务指标。单位：元 币种：人民币。 | 归属于上市公司股东的扣除非经常性损益后的净利润 | 26,849,883,702.90 | 18,540,363,920.92 | 19,290,368,807.38 | 17,612,491,224.05 |。 季度数据与已披露定期报告数据差异说明。4、股东情况。4.1报告期末及年报披露前一个月末的普通股股东总数、表决权恢复的优先股股东总数和持有特别表决权股份的股东总数及前10名股东情况。单位:股。 | 前十名股东持股情况（不含通过转融通出借股份） | | | | | | | |。| 年度报告披露日前上一月末的普...",
+      "normalizedValue": null,
+      "unit": "原文",
+      "scope": "上市公司披露",
+      "relation": "unknown",
+      "limitations": [
+        "检索片段可能截断；需核对公告全文"
+      ],
+      "content": "公司坚持“生态优先、绿色发展”，坚持走好科技创新驱动发展的绿色发展道路，引领打造赤水河生态名片，用更先进方法和技术永葆环境竞争力。 建立生态环保制度地图，加大新技术新工艺引进研发，完善生态环境一体化监控网络，走出了国家级“绿色工厂”科技创新驱动的“双碳”路径。 持续开展流域微生物、水生物、植物植被的科学研究，全力守护流域生物多样性和稳定性，全力维护茅台酒赖以生存的生态系统平衡。3、公司主要会计数据和财务指标。3.1近3年的主要会计数据和财务指标。单位：元 币种：人民币。 | 归属于上市公司股东的扣除非经常性损益后的净利润 | 26,849,883,702.90 | 18,540,363,920.92 | 19,290,368,807.38 | 17,612,491,224.05 |。 季度数据与已披露定期报告数据差异说明。4、股东情况。4.1报告期末及年报披露前一个月末的普通股股东总数、表决权恢复的优先股股东总数和持有特别表决权股份的股东总数及前10名股东情况。单位:股。 | 前十名股东持股情况（不含通过转融通出借股份） | | | | | | | |。| 年度报告披露日前上一月末的普..."
+    },
+    {
+      "id": "e_7008a71a-892",
+      "sourceId": "https://static.cninfo.com.cn/finalpage/2026-04-17/1225114741.PDF?utm_source=openai",
+      "questionId": "original",
+      "sourceType": "original",
+      "title": "官方披露原文",
+      "sourceUrl": "https://static.cninfo.com.cn/finalpage/2026-04-17/1225114741.PDF?utm_source=openai",
+      "locator": "官方原文链接；打开核对对应章节",
+      "reportPeriod": "2025 / 2024",
+      "disclosedAt": null,
+      "fetchedAt": "2026-10-13T23:11:26.09Z",
+      "rawValue": "https://static.cninfo.com.cn/finalpage/2026-04-17/1225114741.PDF?utm_source=openai",
+      "normalizedValue": null,
+      "unit": "文档",
+      "scope": "原文定位",
+      "relation": "unknown",
+      "limitations": [
+        "该步骤仅定位原始材料，不代表系统已经逐页核验全文"
+      ],
+      "content": "已从官方域名检索到材料：https://static.cninfo.com.cn/finalpage/2026-04-17/1225114741.PDF?utm_source=openai。此证据只供溯源，不独立支持投资命题。"
+    },
+    {
+      "id": "e_53b4da68-1f2",
+      "sourceId": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF?utm_source=openai",
+      "questionId": "original",
+      "sourceType": "original",
+      "title": "官方披露原文",
+      "sourceUrl": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF?utm_source=openai",
+      "locator": "官方原文链接；打开核对对应章节",
+      "reportPeriod": "2025 / 2024",
+      "disclosedAt": null,
+      "fetchedAt": "2026-10-13T23:11:26.09Z",
+      "rawValue": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF?utm_source=openai",
+      "normalizedValue": null,
+      "unit": "文档",
+      "scope": "原文定位",
+      "relation": "unknown",
+      "limitations": [
+        "该步骤仅定位原始材料，不代表系统已经逐页核验全文"
+      ],
+      "content": "已从官方域名检索到材料：https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF?utm_source=openai。此证据只供溯源，不独立支持投资命题。"
+    },
+    {
+      "id": "e_c1fa4a12-f8a",
+      "sourceId": "https://static.cninfo.com.cn/finalpage/2026-04-17/1225114741.PDF",
+      "questionId": "original",
+      "sourceType": "original",
+      "title": "官方披露原文",
+      "sourceUrl": "https://static.cninfo.com.cn/finalpage/2026-04-17/1225114741.PDF",
+      "locator": "官方原文链接；打开核对对应章节",
+      "reportPeriod": "2025 / 2024",
+      "disclosedAt": null,
+      "fetchedAt": "2026-10-13T23:11:26.09Z",
+      "rawValue": "https://static.cninfo.com.cn/finalpage/2026-04-17/1225114741.PDF",
+      "normalizedValue": null,
+      "unit": "文档",
+      "scope": "原文定位",
+      "relation": "unknown",
+      "limitations": [
+        "该步骤仅定位原始材料，不代表系统已经逐页核验全文"
+      ],
+      "content": "已从官方域名检索到材料：https://static.cninfo.com.cn/finalpage/2026-04-17/1225114741.PDF。此证据只供溯源，不独立支持投资命题。"
+    },
+    {
+      "id": "e_872bd17a-707",
+      "sourceId": "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-17/600519_20260417_9QS4.pdf",
+      "questionId": "original",
+      "sourceType": "original",
+      "title": "官方披露原文",
+      "sourceUrl": "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-17/600519_20260417_9QS4.pdf",
+      "locator": "官方原文链接；打开核对对应章节",
+      "reportPeriod": "2025 / 2024",
+      "disclosedAt": null,
+      "fetchedAt": "2026-10-13T23:11:26.09Z",
+      "rawValue": "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-17/600519_20260417_9QS4.pdf",
+      "normalizedValue": null,
+      "unit": "文档",
+      "scope": "原文定位",
+      "relation": "unknown",
+      "limitations": [
+        "该步骤仅定位原始材料，不代表系统已经逐页核验全文"
+      ],
+      "content": "已从官方域名检索到材料：https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-17/600519_20260417_9QS4.pdf。此证据只供溯源，不独立支持投资命题。"
+    },
+    {
+      "id": "e_2ea46cf0-c3e",
+      "sourceId": "https://www.sse.com.cn/home/search/index.shtml?webswd=%E8%B4%B5%E5%B7%9E%E8%8C%85%E5%8F%B0+%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A",
+      "questionId": "original",
+      "sourceType": "original",
+      "title": "官方披露原文",
+      "sourceUrl": "https://www.sse.com.cn/home/search/index.shtml?webswd=%E8%B4%B5%E5%B7%9E%E8%8C%85%E5%8F%B0+%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A",
+      "locator": "官方原文链接；打开核对对应章节",
+      "reportPeriod": "2025 / 2024",
+      "disclosedAt": null,
+      "fetchedAt": "2026-10-13T23:11:26.09Z",
+      "rawValue": "https://www.sse.com.cn/home/search/index.shtml?webswd=%E8%B4%B5%E5%B7%9E%E8%8C%85%E5%8F%B0+%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A",
+      "normalizedValue": null,
+      "unit": "文档",
+      "scope": "原文定位",
+      "relation": "unknown",
+      "limitations": [
+        "该步骤仅定位原始材料，不代表系统已经逐页核验全文"
+      ],
+      "content": "已从官方域名检索到材料：https://www.sse.com.cn/home/search/index.shtml?webswd=%E8%B4%B5%E5%B7%9E%E8%8C%85%E5%8F%B0+%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A。此证据只供溯源，不独立支持投资命题。"
+    },
+    {
+      "id": "e_3fec8479-044",
+      "sourceId": "ifind:600519.SH:2025:2024",
+      "questionId": "crosscheck",
+      "sourceType": "disclosure",
+      "title": "iFinD 财务指标交叉复核",
+      "sourceUrl": null,
+      "locator": "get_stock_financials / 实际返回表格",
+      "reportPeriod": "2025 / 2024",
+      "disclosedAt": null,
+      "fetchedAt": "2026-10-13T23:11:31.093Z",
+      "rawValue": "{\"trade_time_description\":\"# 行情衍生指标日期提示\\n\\n当前时间是 07:11:33 ，由于本工具输出的行情类指标为日频指标，若请求时间早于当日收盘时间，则所有行情数据以及当日依赖行情数据计算的指标（如市值、估值、技术指标），实际使用的是昨日收盘后数据计算，每日日频数据更新时间一般在 15:05-15:15，请注意甄别\",\"answer\":\"|证券代码|证券简称|日期|归属母公司股东的净利润-扣除非经常损益(同比增长率)（单位：%）|\\n|---|---|---|---|\\n|600519.SH|贵州茅台|20251231|-4.5776|\\n|600519.SH|贵州茅台|20250930|6.42|\\n|600519.SH|贵州茅台|20250630|8.9276|\\n|600519.SH|贵州茅台|20250331|11.6351|\\n|600519.SH|贵州茅台|20241231|15.3685|\",\"indicators_params\":{\"归属母公司股东的净利润-扣除非经常损益(同比增长率)\":{\"报告期\":\"最新一期(MRQ)\"}}}",
+      "normalizedValue": null,
+      "unit": "原始表格",
+      "scope": "需核对返回日期、年度/单季和单位",
+      "relation": "oppose",
+      "limitations": [
+        "自然语言取数的实际返回口径需与请求和年报复核"
+      ],
+      "content": "{\"trade_time_description\":\"# 行情衍生指标日期提示\\n\\n当前时间是 07:11:33 ，由于本工具输出的行情类指标为日频指标，若请求时间早于当日收盘时间，则所有行情数据以及当日依赖行情数据计算的指标（如市值、估值、技术指标），实际使用的是昨日收盘后数据计算，每日日频数据更新时间一般在 15:05-15:15，请注意甄别\",\"answer\":\"|证券代码|证券简称|日期|归属母公司股东的净利润-扣除非经常损益(同比增长率)（单位：%）|\\n|---|---|---|---|\\n|600519.SH|贵州茅台|20251231|-4.5776|\\n|600519.SH|贵州茅台|20250930|6.42|\\n|600519.SH|贵州茅台|20250630|8.9276|\\n|600519.SH|贵州茅台|20250331|11.6351|\\n|600519.SH|贵州茅台|20241231|15.3685|\",\"indicators_params\":{\"归属母公司股东的净利润-扣除非经常损益(同比增长率)\":{\"报告期\":\"最新一期(MRQ)\"}}}"
+    },
+    {
+      "id": "e_5afe78a1-826",
+      "sourceId": "notice:600519.SH:贵州茅台：贵州茅台2025年年度报告:2026-04-17",
+      "questionId": "disclosure",
+      "sourceType": "disclosure",
+      "title": "贵州茅台：贵州茅台2025年年度报告",
+      "sourceUrl": null,
+      "locator": "iFinD 语义检索片段，页码待原文确认",
+      "reportPeriod": "2025 / 2024",
+      "disclosedAt": "2026-04-17",
+      "fetchedAt": "2026-10-13T23:11:35.224Z",
+      "rawValue": "| 归属于上市公司股东的净利润 | 82,320,067,101.68 | 86,228,146,421.62 | -4.53 | 74,734,071,550.75 |。 | 归属于上市公司股东的扣除非经常性损益的净利润 | 82,293,107,655.25 | 86,240,905,977.42 | -4.58 | 74,752,564,425.52 |。 | | 2025年末 | 2024年末 | 本期末比上年同期末增减（%） | 2023年末 |。 | 主要财务指标 | 2025年 | 2024年 | 本期比上年同期增减(%) | 2023年| | 主要财务指标 | 2025年 | 2024年 | 本期比上年同期增减(%) | 2023年 |。| 基本每股收益（元／股） | 65.66 | 68.64 | -4.34 | 59.49 |。 | 稀释每股收益（元／股） | 65.66 | 68.64 | -4.34 | 59.49 |。| 扣除非经常性损益后的基本每股收益（元／股） | 65.64 | 68.65 | -4.38 | 59.51 |。 | 扣除非经常性损益后的加...",
+      "normalizedValue": null,
+      "unit": "原文",
+      "scope": "上市公司披露",
+      "relation": "oppose",
+      "limitations": [
+        "检索片段可能截断；需核对公告全文"
+      ],
+      "content": "| 归属于上市公司股东的净利润 | 82,320,067,101.68 | 86,228,146,421.62 | -4.53 | 74,734,071,550.75 |。 | 归属于上市公司股东的扣除非经常性损益的净利润 | 82,293,107,655.25 | 86,240,905,977.42 | -4.58 | 74,752,564,425.52 |。 | | 2025年末 | 2024年末 | 本期末比上年同期末增减（%） | 2023年末 |。 | 主要财务指标 | 2025年 | 2024年 | 本期比上年同期增减(%) | 2023年| | 主要财务指标 | 2025年 | 2024年 | 本期比上年同期增减(%) | 2023年 |。| 基本每股收益（元／股） | 65.66 | 68.64 | -4.34 | 59.49 |。 | 稀释每股收益（元／股） | 65.66 | 68.64 | -4.34 | 59.49 |。| 扣除非经常性损益后的基本每股收益（元／股） | 65.64 | 68.65 | -4.38 | 59.51 |。 | 扣除非经常性损益后的加..."
+    },
+    {
+      "id": "e_8c718b17-967",
+      "sourceId": "notice:600519.SH:贵州茅台：贵州茅台2025年年度报告摘要:2026-04-17",
+      "questionId": "disclosure",
+      "sourceType": "disclosure",
+      "title": "贵州茅台：贵州茅台2025年年度报告摘要",
+      "sourceUrl": null,
+      "locator": "iFinD 语义检索片段，页码待原文确认",
+      "reportPeriod": "2025 / 2024",
+      "disclosedAt": "2026-04-17",
+      "fetchedAt": "2026-10-13T23:11:35.224Z",
+      "rawValue": "| | 2025年 | 2024年 | 本年比上年增减(%) | 2023年 |。 | | 2025年 | 2024年 | 本年比上年增减(%) | 2023年 |。 | 归属于上市公司股东的净利润 | 82,320,067,101.68 | 86,228,146,421.62 | -4.53 | 74,734,071,550.75 |。 | 归属于上市公司股东的扣除非经常性损益的净利润 | 82,293,107,655.25 | 86,240,905,977.42 | -4.58 | 74,752,564,425.52 |。 | 归属于上市公司股东的净利润 | 26,847,474,238.76 | 18,555,488,059.34 | 19,223,784,414.08 | 17,693,320,389.50 | | | 第一季度（1-3月份） | 第二季度（4-6月份） | 第三季度（7-9月份） | 第四季度（10-12月份） |。 | 归属于上市公司股东的扣除非经常性损益后的净利润 | 26,849,883,702.90 | 18,540,363,920.92 | 19,2...",
+      "normalizedValue": null,
+      "unit": "原文",
+      "scope": "上市公司披露",
+      "relation": "unknown",
+      "limitations": [
+        "检索片段可能截断；需核对公告全文"
+      ],
+      "content": "| | 2025年 | 2024年 | 本年比上年增减(%) | 2023年 |。 | | 2025年 | 2024年 | 本年比上年增减(%) | 2023年 |。 | 归属于上市公司股东的净利润 | 82,320,067,101.68 | 86,228,146,421.62 | -4.53 | 74,734,071,550.75 |。 | 归属于上市公司股东的扣除非经常性损益的净利润 | 82,293,107,655.25 | 86,240,905,977.42 | -4.58 | 74,752,564,425.52 |。 | 归属于上市公司股东的净利润 | 26,847,474,238.76 | 18,555,488,059.34 | 19,223,784,414.08 | 17,693,320,389.50 | | | 第一季度（1-3月份） | 第二季度（4-6月份） | 第三季度（7-9月份） | 第四季度（10-12月份） |。 | 归属于上市公司股东的扣除非经常性损益后的净利润 | 26,849,883,702.90 | 18,540,363,920.92 | 19,2..."
+    },
+    {
+      "id": "e_3553b437-74e",
+      "sourceId": "notice:600519.SH:贵州茅台：贵州茅台2025年年度报告:2026-04-17",
+      "questionId": "disclosure",
+      "sourceType": "disclosure",
+      "title": "贵州茅台：贵州茅台2025年年度报告",
+      "sourceUrl": null,
+      "locator": "iFinD 语义检索片段，页码待原文确认",
+      "reportPeriod": "2025 / 2024",
+      "disclosedAt": "2026-04-17",
+      "fetchedAt": "2026-10-13T23:11:35.224Z",
+      "rawValue": "| 项目 | 附注 | 2025年度 | 2024年度 |。| 一、营业总收入 | | 172,054,171,890.91 | 174,144,069,958.25 |。 | 项目 | 附注 | 2025年度 | 2024年度 |。| 一、营业总收入 | | 172,054,171,890.91 | 174,144,069,958.25 |。 | 其中：营业收入 | 44 | 168,838,102,514.79 | 170,899,152,276.34 |。| 2.终止经营净利润（净亏损以“－”号填列） | | | |。 | （一）归属母公司所有者的其他综合收益的税后净额 | | 4,137,381.07 | -3,854,497.18 |。| 1．不能重分类进损益的其他综合收益 | | | | | 项目 | 附注 | 2025年度 | 2024年度 |。| 一、营业总收入 | | 172,054,171,890.91 | 174,144,069,958.25 |。 | （一）归属于母公司所有者的综合收益总额 | | 82,324,204,482.75 | 86,224,291,9...",
+      "normalizedValue": null,
+      "unit": "原文",
+      "scope": "上市公司披露",
+      "relation": "unknown",
+      "limitations": [
+        "检索片段可能截断；需核对公告全文"
+      ],
+      "content": "| 项目 | 附注 | 2025年度 | 2024年度 |。| 一、营业总收入 | | 172,054,171,890.91 | 174,144,069,958.25 |。 | 项目 | 附注 | 2025年度 | 2024年度 |。| 一、营业总收入 | | 172,054,171,890.91 | 174,144,069,958.25 |。 | 其中：营业收入 | 44 | 168,838,102,514.79 | 170,899,152,276.34 |。| 2.终止经营净利润（净亏损以“－”号填列） | | | |。 | （一）归属母公司所有者的其他综合收益的税后净额 | | 4,137,381.07 | -3,854,497.18 |。| 1．不能重分类进损益的其他综合收益 | | | | | 项目 | 附注 | 2025年度 | 2024年度 |。| 一、营业总收入 | | 172,054,171,890.91 | 174,144,069,958.25 |。 | （一）归属于母公司所有者的综合收益总额 | | 82,324,204,482.75 | 86,224,291,9..."
+    },
+    {
+      "id": "e_be835a34-2d4",
+      "sourceId": "notice:600519.SH:贵州茅台：贵州茅台2025年年度报告:2026-04-17",
+      "questionId": "disclosure",
+      "sourceType": "disclosure",
+      "title": "贵州茅台：贵州茅台2025年年度报告",
+      "sourceUrl": null,
+      "locator": "iFinD 语义检索片段，页码待原文确认",
+      "reportPeriod": "2025 / 2024",
+      "disclosedAt": "2026-04-17",
+      "fetchedAt": "2026-10-13T23:11:35.224Z",
+      "rawValue": "| 扣除非经常性损益后的加权平均净资产收益率（%） | 32.52 | 36.03 | 减少3.51个百分点 | 34.20 |。报告期末公司前三年主要会计数据和财务指标的说明。 | 归属于上市公司股东的净利润 | 26,847,474,238.76 | 18,555,488,059.34 | 19,223,784,414.08 | 17,693,320,389.50 |。 | 归属于上市公司股东的扣除非经常性损益后的净利润 | 26,849,883,702.90 | 18,540,363,920.92 | 19,290,368,807.38 | 17,612,491,224.05 | | | 第一季度（1-3月份） | 第二季度（4-6月份） | 第三季度（7-9月份） | 第四季度（10-12月份） |。 季度数据与已披露定期报告数据差异说明。十、非经常性损益项目和金额。单位：元币种：人民币。| 非经常性损益项目 | 2025年金额 | 附注（如适用） | 2024年金额 | 2023年金额 |。 | 除同公司正常经营业务相关的有效套期保值业务外，非金融企业持有金融资产和金融负债产...",
+      "normalizedValue": null,
+      "unit": "原文",
+      "scope": "上市公司披露",
+      "relation": "unknown",
+      "limitations": [
+        "检索片段可能截断；需核对公告全文"
+      ],
+      "content": "| 扣除非经常性损益后的加权平均净资产收益率（%） | 32.52 | 36.03 | 减少3.51个百分点 | 34.20 |。报告期末公司前三年主要会计数据和财务指标的说明。 | 归属于上市公司股东的净利润 | 26,847,474,238.76 | 18,555,488,059.34 | 19,223,784,414.08 | 17,693,320,389.50 |。 | 归属于上市公司股东的扣除非经常性损益后的净利润 | 26,849,883,702.90 | 18,540,363,920.92 | 19,290,368,807.38 | 17,612,491,224.05 | | | 第一季度（1-3月份） | 第二季度（4-6月份） | 第三季度（7-9月份） | 第四季度（10-12月份） |。 季度数据与已披露定期报告数据差异说明。十、非经常性损益项目和金额。单位：元币种：人民币。| 非经常性损益项目 | 2025年金额 | 附注（如适用） | 2024年金额 | 2023年金额 |。 | 除同公司正常经营业务相关的有效套期保值业务外，非金融企业持有金融资产和金融负债产..."
+    },
+    {
+      "id": "e_396e925e-9c8",
+      "sourceId": "notice:600519.SH:贵州茅台：贵州茅台2025年年度报告:2026-04-17",
+      "questionId": "disclosure",
+      "sourceType": "disclosure",
+      "title": "贵州茅台：贵州茅台2025年年度报告",
+      "sourceUrl": null,
+      "locator": "iFinD 语义检索片段，页码待原文确认",
+      "reportPeriod": "2025 / 2024",
+      "disclosedAt": "2026-04-17",
+      "fetchedAt": "2026-10-13T23:11:38.989Z",
+      "rawValue": "| 营业收入 | 168,838,102,514.79 | 170,899,152,276.34 | -1.21 | 147,693,604,994.14 |。 | 利润总额 | 114,755,261,605.08 | 119,638,578,194.46 | -4.08 | 103,662,553,689.81 |。 | 归属于上市公司股东的净利润 | 82,320,067,101.68 | 86,228,146,421.62 | -4.53 | 74,734,071,550.75 |。 | 营业收入 | 168,838,102,514.79 | 170,899,152,276.34 | -1.21 | 147,693,604,994.14 |。 | | 2025年末 | 2024年末 | 本期末比上年同期末增减（%） | 2023年末 |。 | 主要财务指标 | 2025年 | 2024年 | 本期比上年同期增减(%) | 2023年| | 主要财务指标 | 2025年 | 2024年 | 本期比上年同期增减(%) | 2023年 |。| 基本每股收益（元／股） | 65.66 ...",
+      "normalizedValue": null,
+      "unit": "原文",
+      "scope": "上市公司披露",
+      "relation": "unknown",
+      "limitations": [
+        "检索片段可能截断；需核对公告全文"
+      ],
+      "content": "| 营业收入 | 168,838,102,514.79 | 170,899,152,276.34 | -1.21 | 147,693,604,994.14 |。 | 利润总额 | 114,755,261,605.08 | 119,638,578,194.46 | -4.08 | 103,662,553,689.81 |。 | 归属于上市公司股东的净利润 | 82,320,067,101.68 | 86,228,146,421.62 | -4.53 | 74,734,071,550.75 |。 | 营业收入 | 168,838,102,514.79 | 170,899,152,276.34 | -1.21 | 147,693,604,994.14 |。 | | 2025年末 | 2024年末 | 本期末比上年同期末增减（%） | 2023年末 |。 | 主要财务指标 | 2025年 | 2024年 | 本期比上年同期增减(%) | 2023年| | 主要财务指标 | 2025年 | 2024年 | 本期比上年同期增减(%) | 2023年 |。| 基本每股收益（元／股） | 65.66 ..."
+    },
+    {
+      "id": "e_c1f5337d-960",
+      "sourceId": "notice:600519.SH:贵州茅台：贵州茅台2025年年度报告:2026-04-17",
+      "questionId": "disclosure",
+      "sourceType": "disclosure",
+      "title": "贵州茅台：贵州茅台2025年年度报告",
+      "sourceUrl": null,
+      "locator": "iFinD 语义检索片段，页码待原文确认",
+      "reportPeriod": "2025 / 2024",
+      "disclosedAt": "2026-04-17",
+      "fetchedAt": "2026-10-13T23:11:38.989Z",
+      "rawValue": "情况说明。本期国内增加的均为酱香系列酒经销商。(5).线上销售情况。单位：万元币种：人民币。| 线上销售平台 | 线上销售产品档次 | 本期销售收入 | 上期销售收入 | 同比（%） | 毛利率（%） | 。 未来将按照市场化原则逐步丰富i茅台上架产品矩阵。7、公司收入及成本分析。(1).按不同类型披露公司主营业务构成。单位：元 币种：人民币。 | 划分类型 | 营业收入 | 同比（%） | 营业成本 | 同比（%） | 毛利率（%） | 同比（%） |。| 按产品档次 | | | | | | | | 划分类型 | 营业收入 | 同比（%） | 营业成本 | 同比（%） | 毛利率（%） | 同比（%） |。| 按产品档次 | | | | | | |。 441.18 | 0.89 | 87.86 | -1.56| | 划分类型 | 营业收入 | 同比（%） | 营业成本 | 同比（%） | 毛利率（%） | 同比（%） |。| 按产品档次 | | | | | | |。 | 划分类型 | 营业收入 | 同比（%） | 营业成本 | 同比（%） | 毛利率（%） | 同比（%） |。| 按...",
+      "normalizedValue": null,
+      "unit": "原文",
+      "scope": "上市公司披露",
+      "relation": "unknown",
+      "limitations": [
+        "检索片段可能截断；需核对公告全文"
+      ],
+      "content": "情况说明。本期国内增加的均为酱香系列酒经销商。(5).线上销售情况。单位：万元币种：人民币。| 线上销售平台 | 线上销售产品档次 | 本期销售收入 | 上期销售收入 | 同比（%） | 毛利率（%） | 。 未来将按照市场化原则逐步丰富i茅台上架产品矩阵。7、公司收入及成本分析。(1).按不同类型披露公司主营业务构成。单位：元 币种：人民币。 | 划分类型 | 营业收入 | 同比（%） | 营业成本 | 同比（%） | 毛利率（%） | 同比（%） |。| 按产品档次 | | | | | | | | 划分类型 | 营业收入 | 同比（%） | 营业成本 | 同比（%） | 毛利率（%） | 同比（%） |。| 按产品档次 | | | | | | |。 441.18 | 0.89 | 87.86 | -1.56| | 划分类型 | 营业收入 | 同比（%） | 营业成本 | 同比（%） | 毛利率（%） | 同比（%） |。| 按产品档次 | | | | | | |。 | 划分类型 | 营业收入 | 同比（%） | 营业成本 | 同比（%） | 毛利率（%） | 同比（%） |。| 按..."
+    },
+    {
+      "id": "e_1c28d9f7-59c",
+      "sourceId": "notice:600519.SH:贵州茅台：贵州茅台2025年年度报告:2026-04-17",
+      "questionId": "disclosure",
+      "sourceType": "disclosure",
+      "title": "贵州茅台：贵州茅台2025年年度报告",
+      "sourceUrl": null,
+      "locator": "iFinD 语义检索片段，页码待原文确认",
+      "reportPeriod": "2025 / 2024",
+      "disclosedAt": "2026-04-17",
+      "fetchedAt": "2026-10-13T23:11:38.989Z",
+      "rawValue": "| 分行业 | 营业收入 | 营业成本 | 毛利率（%） | 营业收入比上年增减（%） | 营业成本比上年增减（%） | 毛利率比上年增减（%）| | 主营业务分行业情况 | | | | | | |。| 分行业 | 营业收入 | 营业成本 | 毛利率（%） | 营业收入比上年增减（%） | 营业成本比上年增减（%） | 毛利率比上年增减（%） |。 | 主营业务分产品情况 | | | | | | |。| 分产品 | 营业收入 | 营业成本 | 毛利率（%） | 营业收入比上年增减（%） | 营业成本比上年增减（%） | 毛利率比上年增减（%） |。 | 主营业务分行业情况 | | | | | | |。| 分行业 | 营业收入 | 营业成本 | 毛利率（%） | 营业收入比上年增减（%） | 营业成本比上年增减（%） | 毛利率比上年增减（%） |。 | 主营业务分行业情况 | | | | | | |。| 分行业 | 营业收入 | 营业成本 | 毛利率（%） | 营业收入比上年增减（%） | 营业成本比上年增减（%） | 毛利率比上年增减（%） |。 | 销售模式 | 营业收入 | 营业...",
+      "normalizedValue": null,
+      "unit": "原文",
+      "scope": "上市公司披露",
+      "relation": "unknown",
+      "limitations": [
+        "检索片段可能截断；需核对公告全文"
+      ],
+      "content": "| 分行业 | 营业收入 | 营业成本 | 毛利率（%） | 营业收入比上年增减（%） | 营业成本比上年增减（%） | 毛利率比上年增减（%）| | 主营业务分行业情况 | | | | | | |。| 分行业 | 营业收入 | 营业成本 | 毛利率（%） | 营业收入比上年增减（%） | 营业成本比上年增减（%） | 毛利率比上年增减（%） |。 | 主营业务分产品情况 | | | | | | |。| 分产品 | 营业收入 | 营业成本 | 毛利率（%） | 营业收入比上年增减（%） | 营业成本比上年增减（%） | 毛利率比上年增减（%） |。 | 主营业务分行业情况 | | | | | | |。| 分行业 | 营业收入 | 营业成本 | 毛利率（%） | 营业收入比上年增减（%） | 营业成本比上年增减（%） | 毛利率比上年增减（%） |。 | 主营业务分行业情况 | | | | | | |。| 分行业 | 营业收入 | 营业成本 | 毛利率（%） | 营业收入比上年增减（%） | 营业成本比上年增减（%） | 毛利率比上年增减（%） |。 | 销售模式 | 营业收入 | 营业..."
+    },
+    {
+      "id": "e_cb561bb9-25d",
+      "sourceId": "notice:600519.SH:贵州茅台：贵州茅台2025年年度报告:2026-04-17",
+      "questionId": "disclosure",
+      "sourceType": "disclosure",
+      "title": "贵州茅台：贵州茅台2025年年度报告",
+      "sourceUrl": null,
+      "locator": "iFinD 语义检索片段，页码待原文确认",
+      "reportPeriod": "2025 / 2024",
+      "disclosedAt": "2026-04-17",
+      "fetchedAt": "2026-10-13T23:11:38.989Z",
+      "rawValue": "2、境外资产情况。(1).资产规模。其中：境外资产101,952,616.79（单位：元 币种：人民币），占总资产的比例为0.03%。(2).境外资产占比较高的相关说明。3、截至报告期末主要资产受限情况。 详见第八节财务报告七、合并财务报表项目注释27、所有权或使用权受限资产。(四)行业经营性信息分析。酒制造行业经营性信息分析。1、行业基本情况。根据国家统计局数据，2025年全国规模以上白酒企业累计产量354.9万千升。 说明：（1）2025年茅台酒基酒设计产能为46,395.00吨，同比新增基酒产能1,800.00吨，新增产能于2025年10月投产，由于茅台酒的生产工艺特点，将在2026年释放； 2025年系列酒基酒设计产能为59,400.00吨，同比新增基酒产能6,940.00吨，新增产能于2025年12月投产，由于系列酒的生产工艺特点，将在2026年释放。 | 产品档次 | 产量（吨） | 同比（%） | 销量（吨） | 同比（%） | 产销率(%) | 销售收入 | 同比（%） | 主要代表品牌| | 产品档次 | 产量（吨） | 同比（%） | 销量（吨） | 同比（%） |...",
+      "normalizedValue": null,
+      "unit": "原文",
+      "scope": "上市公司披露",
+      "relation": "unknown",
+      "limitations": [
+        "检索片段可能截断；需核对公告全文"
+      ],
+      "content": "2、境外资产情况。(1).资产规模。其中：境外资产101,952,616.79（单位：元 币种：人民币），占总资产的比例为0.03%。(2).境外资产占比较高的相关说明。3、截至报告期末主要资产受限情况。 详见第八节财务报告七、合并财务报表项目注释27、所有权或使用权受限资产。(四)行业经营性信息分析。酒制造行业经营性信息分析。1、行业基本情况。根据国家统计局数据，2025年全国规模以上白酒企业累计产量354.9万千升。 说明：（1）2025年茅台酒基酒设计产能为46,395.00吨，同比新增基酒产能1,800.00吨，新增产能于2025年10月投产，由于茅台酒的生产工艺特点，将在2026年释放； 2025年系列酒基酒设计产能为59,400.00吨，同比新增基酒产能6,940.00吨，新增产能于2025年12月投产，由于系列酒的生产工艺特点，将在2026年释放。 | 产品档次 | 产量（吨） | 同比（%） | 销量（吨） | 同比（%） | 产销率(%) | 销售收入 | 同比（%） | 主要代表品牌| | 产品档次 | 产量（吨） | 同比（%） | 销量（吨） | 同比（%） |..."
+    }
+  ],
+  "conclusion": {
+    "verdict": "不支持",
+    "summary": "基于2025年与2024年年报数据，贵州茅台2025年度归母净利润并未增长，反而同比下降4.53%（823.20亿元 vs 862.28亿元）。扣非归母净利润也同比下降4.58%，与归母净利润方向一致，但都不是增长。同期营业收入同比下降1.21%，毛利率也小幅回落，经营活动现金流净额同比下降33.46%。非经常性损益规模较小，不足以解释利润变化，更不能支持“净利润增长主要来自主营业务改善”这一前提。",
+    "claims": [
+      {
+        "text": "贵州茅台2025年度归母净利润没有增长，而是同比下降4.53%。",
+        "evidenceIds": [
+          "e_32fae809-fa4",
+          "e_d90c0c7e-2d8",
+          "e_5afe78a1-826"
+        ],
+        "relation": "oppose"
+      },
+      {
+        "text": "扣非归母净利润同样同比下降4.58%，与归母净利润方向一致，但这说明2025年并不存在“利润增长”前提。",
+        "evidenceIds": [
+          "e_5afe78a1-826",
+          "e_3fec8479-044"
+        ],
+        "relation": "oppose"
+      },
+      {
+        "text": "2025年营业收入同比下降1.21%，毛利率也从91.93%降至91.18%，主营业务经营指标并未体现改善。",
+        "evidenceIds": [
+          "e_669bb0ea-d62",
+          "e_92d19661-f08",
+          "e_cc02a110-20d",
+          "e_77f89f22-2f1"
+        ],
+        "relation": "oppose"
+      },
+      {
+        "text": "经营活动现金流净额同比下降33.46%，现金流质量没有同步增强，难以作为利润改善的佐证。",
+        "evidenceIds": [
+          "e_41a7680f-435",
+          "e_b0403a34-8ad"
+        ],
+        "relation": "oppose"
+      },
+      {
+        "text": "非经常性损益项目中，政府补助、金融资产相关损益、资产处置等项目规模相对有限，未见其主导2025年利润变动。",
+        "evidenceIds": [
+          "e_92a9b931-0cd",
+          "e_d57efeb8-ecb",
+          "e_501dd62f-853"
+        ],
+        "relation": "oppose"
+      }
+    ],
+    "conflicts": [
+      {
+        "description": "用户命题假设2025年度归母净利润增长，但财务数据表明归母净利润实际下滑。",
+        "evidenceIds": [
+          "e_32fae809-fa4",
+          "e_d90c0c7e-2d8",
+          "e_5afe78a1-826"
+        ],
+        "resolution": "前提不成立，因此无需继续论证“增长主要来自主营业务改善”；应改为评估“2025年利润下滑主要由哪些经营因素导致”。"
+      },
+      {
+        "description": "非经常性损益存在一定金融资产相关收益，但金额相对归母净利润体量较小，且不足以扭转整体利润下行。",
+        "evidenceIds": [
+          "e_d57efeb8-ecb",
+          "e_501dd62f-853",
+          "e_5afe78a1-826"
+        ],
+        "resolution": "这些项目可作为补充解释，但不能构成对“利润增长来自主营业务改善”的支持。"
+      }
+    ],
+    "limitations": [
+      "未逐页核验年报全文，仅基于工具返回的财务数据、语义检索片段和官方原文链接定位；片段可能截断。",
+      "缺少完整的分产品/分业务收入与毛利率明细表全文，因此对“主营业务改善”的拆解只能基于已取到的总收入、毛利率、现金流和相关披露片段判断。",
+      "原文链接已定位，但原文证据仅用于溯源，不单独作为支持或反对结论的依据。"
+    ],
+    "revisionTriggers": [
+      {
+        "condition": "若后续核验到2025年正式年报中的归母净利润口径与当前工具数据存在重大差异",
+        "effect": "需要重新计算同比变动并重判命题。"
+      },
+      {
+        "condition": "若补充取得完整分产品/分业务收入、毛利率、投资收益及非经常性损益附注，且显示利润确有增长",
+        "effect": "可重新判断增长来源是否主要来自主营业务改善。"
+      },
+      {
+        "condition": "若用户改问“2025年利润下滑的主要原因是什么”",
+        "effect": "应转为分析收入、成本、费用、投资收益和现金流对利润下滑的贡献。"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "label": "营业收入",
+      "current": 168838102514.79,
+      "previous": 170899152276.34,
+      "unit": "元",
+      "growth": -1.21,
+      "evidenceIds": [
+        "e_669bb0ea-d62",
+        "e_92d19661-f08"
+      ]
+    },
+    {
+      "label": "归母净利润",
+      "current": 82320067101.68,
+      "previous": 86228146421.62,
+      "unit": "元",
+      "growth": -4.53,
+      "evidenceIds": [
+        "e_32fae809-fa4",
+        "e_d90c0c7e-2d8"
+      ]
+    },
+    {
+      "label": "营业利润",
+      "current": 114808950164.24,
+      "previous": 119688579453.23,
+      "unit": "元",
+      "growth": -4.08,
+      "evidenceIds": [
+        "e_91a35ca8-49b",
+        "e_68ca1756-ce8"
+      ]
+    },
+    {
+      "label": "经营现金流净额",
+      "current": 61522204989.35,
+      "previous": 92463692168.43,
+      "unit": "元",
+      "growth": -33.46,
+      "evidenceIds": [
+        "e_41a7680f-435",
+        "e_b0403a34-8ad"
+      ]
+    },
+    {
+      "label": "毛利率",
+      "current": 91.17955168348007,
+      "previous": 91.93121663606456,
+      "unit": "%",
+      "growth": null,
+      "evidenceIds": [
+        "e_669bb0ea-d62",
+        "e_92d19661-f08",
+        "e_cc02a110-20d",
+        "e_77f89f22-2f1"
+      ]
+    }
+  ],
+  "messages": [],
+  "usage": {
+    "model": "gpt-5.4-mini",
+    "inputTokens": 90587,
+    "outputTokens": 2489,
+    "toolCalls": 8
+  }
+}

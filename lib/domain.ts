@@ -39,6 +39,7 @@ export interface ProviderContext {
   openaiKey: string;
   model: string;
   fetcher?: typeof fetch;
+  signal?: AbortSignal;
 }
 export interface ResearchQuestion {id:string;question:string;method:string;expectedSources:string[]}
 export interface Conclusion {

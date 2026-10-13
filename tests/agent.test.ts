@@ -1,6 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
+test('narrative amounts must match source values after unit conversion',async()=>{
+ const {validateConclusion}=await import('../lib/validate.ts');
+ const base={verdict:'不支持',summary:'归母净利润为82.32亿元',claims:[{text:'利润下降',evidenceIds:['profit'],relation:'oppose'}],conflicts:[],limitations:['片段核验'],revisionTriggers:[{condition:'数据更正',effect:'重算'}]};
+ const evidence=[{id:'profit',sourceType:'financial',normalizedValue:82320067101.68,content:'归母净利润：82320067101.68 元',rawValue:'82320067101.68'}];
+ assert.equal(validateConclusion(base as any,evidence as any).ok,false,'tenfold amount error must fail');
+ assert.equal(validateConclusion({...base,summary:'归母净利润为823.20亿元'} as any,evidence as any).ok,true);
+});
+
 test('conclusions cannot reference evidence that was not collected',async()=>{
  const m=await import('../lib/validate.ts').catch(()=>null);
  assert.equal(typeof m?.validateConclusion,'function','conclusion validator must exist');

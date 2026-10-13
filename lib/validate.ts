@@ -1,6 +1,15 @@
 import type {Conclusion,Evidence,ResearchInput} from './domain.ts';
 export function validateConclusion(conclusion:Conclusion,evidence:Evidence[]):{ok:boolean;errors:string[]}{
  const errors:string[]=[];const ids=new Set(evidence.map(x=>x.id));
+ const amounts=evidence.flatMap(e=>[...(typeof e.normalizedValue==='number'?[e.normalizedValue]:[]),...((e.content||'')+' '+(e.rawValue||'')).matchAll(/-?\d[\d,]*(?:\.\d+)?/g)].map(x=>typeof x==='number'?x:Number(x[0].replaceAll(',','')))).filter(Number.isFinite);
+ const narrative=[conclusion.summary,...(conclusion.claims||[]).map(c=>c.text),...(conclusion.conflicts||[]).flatMap(c=>[c.description,c.resolution])].join(' ');
+ for(const match of narrative.matchAll(/(-?[\d,]+(?:\.\d+)?)\s*(亿|万)?元/g)){
+  const scale=match[2]==='亿'?1e8:match[2]==='万'?1e4:1;
+  const value=Number(match[1].replaceAll(',',''))*scale;
+  const precision=match[1].includes('.')?match[1].split('.')[1].length:0;
+  const tolerance=.51*Math.pow(10,-precision)*scale;
+  if(!amounts.some(n=>Math.abs(n-value)<=tolerance))errors.push(`金额 ${match[0]} 无法与原始证据匹配，请核对单位或改为定性描述，金额保留在计算对照表`);
+ }
  if(!['支持','部分支持','不支持','证据不足'].includes(conclusion.verdict))errors.push('结论类别无效');
  if(!conclusion.summary?.trim())errors.push('结论摘要缺失');
  if(conclusion.verdict!=='证据不足'&&!conclusion.claims?.length)errors.push('判断缺少可追溯依据');
