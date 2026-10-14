@@ -53,9 +53,9 @@ export default defineConfig(async ({ command }) => {
 
   return {
     server: {
-      ...(managedLinux
-        ? { host: "0.0.0.0", allowedHosts: ["terminal.local"] }
-        : {}),
+      ...(managedLinux ? { host: "0.0.0.0" } : {}),
+      // Allow Cloudflare quick tunnels used for public demo URLs.
+      allowedHosts: [".trycloudflare.com", "terminal.local"],
       ...(isCodexSeatbeltSandbox
         ? { watch: { useFsEvents: false, usePolling: true } }
         : {}),
